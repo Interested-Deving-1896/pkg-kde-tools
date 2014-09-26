@@ -24,6 +24,9 @@ include $(dqk_dir)policy.mk
 # Support list-missing target
 include $(dqk_dir)list-missing.mk
 
+# Support lintian target
+include $(dqk_dir)lintian.mk
+
 # KDE packages are parallel safe. Add --parallel to dh_auto_% commands
 $(call set_command_options,dh_auto_%, += --parallel)
 
@@ -96,6 +99,8 @@ install_to_doc-html_package:
 	    done; \
 	fi
 $(foreach t,install-indep install,post_$(t)_dh_install): install_to_doc-html_package
+
+post_binary: list-missing lintian
 
 .PHONY: run_dh_sameversiondep cleanup_manpages install_to_doc-html_package
 
