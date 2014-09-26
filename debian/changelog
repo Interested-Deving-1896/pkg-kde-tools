@@ -1,3 +1,13 @@
+pkg-kde-tools (0.15.16) UNRELEASED; urgency=medium
+
+  [ Rohan Garg ]
+  * Add packaging for Frameworks 5 packages:
+   - datalib/kf5_flags
+   - Debhelper buildsystem and sequence flags
+   - qt-kde-team/3 include scripts
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Sep 2014 14:50:15 +0200
+
 pkg-kde-tools (0.15.15) unstable; urgency=medium
 
   * The fix for #744173 required to convert non-anchored regexps to anchored
