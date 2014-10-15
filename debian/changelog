@@ -1,6 +1,8 @@
-pkg-kde-tools (0.15.15~bpo70+1) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.15~bpo70+1) wheezy-backports; urgency=medium
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 15 Oct 2014 15:34:15 -0300
+  * Upload to wheezy-backports.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 15 Oct 2014 15:35:12 -0300
 
 pkg-kde-tools (0.15.15) unstable; urgency=medium
 
