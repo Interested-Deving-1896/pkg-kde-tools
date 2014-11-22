@@ -17,7 +17,8 @@
 ifdef dqk_dir
 
 lintian:
-	dpkg-genchanges > ../.pkg-kde-lintian.changes
+	# Allow the target to fail if it's a binary only build
+	-dpkg-genchanges > ../.pkg-kde-lintian.changes
 	@echo "=== Start lintian"
 	@-lintian ../.pkg-kde-lintian.changes
 	@echo "=== End lintian"
