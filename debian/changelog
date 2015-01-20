@@ -16,6 +16,9 @@ pkg-kde-tools (0.15.16~) UNRELEASED; urgency=medium
   * Use KDE_INSTALL_USE_QT_SYS_PATHS to do the right thing automatically. and drop useless calls.
   * dpkg_architecture_value isn't used, remove
 
+  [ Maximiliano Curia ]
+  * Bump Standards-Version to 3.9.6, no changes needed
+
  -- Rohan Garg <rohan@kde.org>  Tue, 20 Jan 2015 13:05:51 +0100
 
 pkg-kde-tools (0.15.15) unstable; urgency=medium
