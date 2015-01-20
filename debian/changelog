@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.16~) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.16) experimental; urgency=medium
 
   [ Rohan Garg ]
   * Add new sequence helpers for KDE Frameowrks 5
@@ -19,7 +19,7 @@ pkg-kde-tools (0.15.16~) UNRELEASED; urgency=medium
   [ Maximiliano Curia ]
   * Bump Standards-Version to 3.9.6, no changes needed
 
- -- Rohan Garg <rohan@kde.org>  Tue, 20 Jan 2015 13:05:51 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 20 Jan 2015 13:24:21 +0100
 
 pkg-kde-tools (0.15.15) unstable; urgency=medium
 
