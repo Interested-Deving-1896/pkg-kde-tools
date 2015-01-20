@@ -1,3 +1,23 @@
+pkg-kde-tools (0.15.16~) UNRELEASED; urgency=medium
+
+  [ Rohan Garg ]
+  * Add new sequence helpers for KDE Frameowrks 5
+  * Drop useless code from KDE Frameworks time
+  * Use the KF5 sequence helper
+  * Fix sillyness
+  * Fix sequence to use KF5 instead of KDE4
+  * More misc. fixes for the KF5 sequence
+  * meinproc4 is no more in KF5 land, all hail meinproc5
+  * Nuke auto_configure duplication, doesn't make sense since we source the KF5 sequence
+  * Remove useless pkg-kde-tools.kdev4 file
+  * Make sure we don't link to libkdeinit5_ explicitly
+  * Make sure ECM_MKSPECS_INSTALL_DIR is also passed
+  * Add proper marker while passing ECM_MKSPECS_INSTALL_DIR
+  * Use KDE_INSTALL_USE_QT_SYS_PATHS to do the right thing automatically. and drop useless calls.
+  * dpkg_architecture_value isn't used, remove
+
+ -- Rohan Garg <rohan@kde.org>  Tue, 20 Jan 2015 13:05:51 +0100
+
 pkg-kde-tools (0.15.15) unstable; urgency=medium
 
   * The fix for #744173 required to convert non-anchored regexps to anchored
