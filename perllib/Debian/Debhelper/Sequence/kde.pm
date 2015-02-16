@@ -41,4 +41,8 @@ add_command_options("dh_compress",
 
 insert_after("dh_install", "dh_movelibkdeinit");
 
+# Only does stuff when package opts into l10n by setting
+# X-Ubuntu-Use-Langpack: yes
+require Debian::Debhelper::Sequence::kubuntu_l10n;
+
 1;
