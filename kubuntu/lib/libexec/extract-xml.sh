@@ -21,6 +21,10 @@ for subdir in $dirs; do
      xml_po_list=`bash -c ". XmlMessages.sh ; get_files"`
      for xml_file_relpath in $xml_po_list; do
        xml_file_po=`bash -c ". XmlMessages.sh ; po_for_file $xml_file_relpath"`
+       tags_for_file=`bash -c ". XmlMessages.sh ; tags_for_file $xml_file_relpath"`
+       if [ "x$tags_for_file" != "xcomment" ]; then
+         echo "At the moment we only support extraction of the comment tag, not of $tags_for_file"
+       fi
        xml_podir=${xml_file_relpath}.podir
        xml_in_file=$xml_podir/`basename $xml_file_relpath`.in
        if [ ! -e $xml_podir ]; then
@@ -33,6 +37,8 @@ for subdir in $dirs; do
            echo "Empty preprocessed XML file: $xml_in_file !"
          fi
          rm -rf $xml_podir
+         $FILLXMLFROMPO $xml_file_relpath $L10NDIR $SUBMODULE $xml_file_po
+         xmllint $xml_file_relpath --noout
        else
          echo "$xml_podir exists!"
        fi
