@@ -1,3 +1,19 @@
+pkg-kde-tools (0.15.16ubuntu1) vivid; urgency=medium
+
+  * Merge with Debian experimental, remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk: distribution text = "Kubuntu packages"
+    - debian/rules: add rules to sync l10n
+    - add debian/KUBUNTU-BZR-WORKFLOW
+    - Add l10n scripts in kubuntu/
+    - debian/pkg-kde-tools.install: install kubuntu/ files
+    - qt-kde-team/{1,2}/policy.mk: remove maintainer checking
+    - qt-kde-team/{2,3}/debian-qt-kde.mk: run list-missing after the binary target
+    - qt-kde-team/{2,3}/list-missing.mk: print marker before and after list-missing
+      output for script parsing
+    - Add qt-kde-team/{2,3}/lintian.mk and call it in qt-kde-team/{2,3}/debian-qt-kde.mk
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Jan 2015 14:20:34 +0300
+
 pkg-kde-tools (0.15.16) experimental; urgency=medium
 
   [ Rohan Garg ]

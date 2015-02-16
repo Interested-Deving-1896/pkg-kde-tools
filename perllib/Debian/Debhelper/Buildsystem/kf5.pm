@@ -8,7 +8,7 @@ package Debian::Debhelper::Buildsystem::kf5;
 
 use strict;
 use warnings;
-use Debian::Debhelper::Dh_Lib qw(error dpkg_architecture_value);
+use Debian::Debhelper::Dh_Lib qw(error);
 use Dpkg::Version qw();
 
 use base 'Debian::Debhelper::Buildsystem::cmake';
@@ -44,7 +44,6 @@ sub get_kf5_flags {
 
     # Unescape flags using shell
     $flags = `$^X -w -Mstrict -e 'print join("\\x1e", \@ARGV);' -- $escaped_flags`;
-    $flags = $flags . "\x1e-DECM_MKSPECS_INSTALL_DIR=/usr/lib/" . dpkg_architecture_value('DEB_HOST_MULTIARCH') . "/qt5/mkspecs/modules/";
     return split("\x1e", $flags);
 }
 
