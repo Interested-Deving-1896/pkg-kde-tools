@@ -25,9 +25,9 @@ list-missing:
 	  (for package in $(shell dh_listpackages); do \
 	     (cd debian/$$package && find . -type f -o -type l); \
 	   done; \
-	   test -e debian/not-installed && grep -v '^#' debian/not-installed | \
-	   while read glob_patt; do \
-	      (cd debian/tmp; find . -path ./"$${glob_patt}" '(' -type f -o -type l ')'); \
+	   test -e debian/not-installed && sed '/^#/d;/^$$/d;s|/$$||;/^\.\//!s|^|./|' debian/not-installed | \
+	     while read glob_patt; do \
+	       (cd debian/tmp; find . '(' -path "$${glob_patt}" -o -path "$${glob_patt}"'/*' ')' '(' -type f -o -type l ')'); \
 	   done; \
 	   ) | sort -u > debian/dhmk-package-list; \
 	  diff -u debian/dhmk-install-list debian/dhmk-package-list | sed '1,2d' | egrep '^-' || true; \
