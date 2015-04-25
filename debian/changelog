@@ -1,3 +1,11 @@
+pkg-kde-tools (0.15.16) UNRELEASED; urgency=medium
+
+  [ Diane Trout ]
+  * Add man pages for pkgkde-gensymbols and pkgkde-symbolshelper
+    (Closes: #782866)
+
+ -- Diane Trout <diane@ghic.org>  Fri, 24 Apr 2015 21:06:02 -0700
+
 pkg-kde-tools (0.15.15) unstable; urgency=medium
 
   * The fix for #744173 required to convert non-anchored regexps to anchored
