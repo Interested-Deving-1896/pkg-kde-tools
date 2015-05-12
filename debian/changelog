@@ -4,6 +4,10 @@ pkg-kde-tools (0.15.17~) UNRELEASED; urgency=medium
   * Add man pages for pkgkde-gensymbols and pkgkde-symbolshelper
     (Closes: #782866).
 
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add pkgkde-mark-private-symbols to avoid shipping the script on every
+    Qt5 package.
+
  -- Maximiliano Curia <maxy@debian.org>  Thu, 26 Mar 2015 17:22:29 +0100
 
 pkg-kde-tools (0.15.16) experimental; urgency=medium
