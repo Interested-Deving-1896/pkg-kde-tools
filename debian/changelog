@@ -1,6 +1,8 @@
 pkg-kde-tools (0.15.17~) UNRELEASED; urgency=medium
 
-  * 
+  [ Diane Trout ]
+  * Add man pages for pkgkde-gensymbols and pkgkde-symbolshelper
+    (Closes: #782866).
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 26 Mar 2015 17:22:29 +0100
 
