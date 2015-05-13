@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.17~) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.17) unstable; urgency=medium
 
   [ Diane Trout ]
   * Add man pages for pkgkde-gensymbols and pkgkde-symbolshelper
@@ -7,8 +7,9 @@ pkg-kde-tools (0.15.17~) UNRELEASED; urgency=medium
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Add pkgkde-mark-private-symbols to avoid shipping the script on every
     Qt5 package.
+  * Release to unstable.
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 26 Mar 2015 17:22:29 +0100
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 13 May 2015 09:40:11 -0300
 
 pkg-kde-tools (0.15.16) experimental; urgency=medium
 
