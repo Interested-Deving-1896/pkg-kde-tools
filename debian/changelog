@@ -1,3 +1,31 @@
+pkg-kde-tools (0.15.17ubuntu1) wily; urgency=medium
+
+  * Merge with Debian, remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk: distribution text = "Kubuntu packages"
+    - debian/rules: add rules to sync l10n
+    - Add l10n scripts in kubuntu/
+    - Add kubuntu_l10n.pm sequence for Debhelper
+    - Require kubuntu_l10n sequence in {kf5,kde}.pm sequence
+    - debian/pkg-kde-tools.install: install kubuntu/ files
+    - qt-kde-team/{1,2,3}/policy.mk: remove maintainer checking
+    - Add qt-kde-team/{2,3}/lintian.mk and call it after the binary target in
+      qt-kde-team/{2,3}/debian-qt-kde.mk
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 15 May 2015 17:04:16 +0200
+
+pkg-kde-tools (0.15.17) unstable; urgency=medium
+
+  [ Diane Trout ]
+  * Add man pages for pkgkde-gensymbols and pkgkde-symbolshelper
+    (Closes: #782866).
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add pkgkde-mark-private-symbols to avoid shipping the script on every
+    Qt5 package.
+  * Release to unstable.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 13 May 2015 09:40:11 -0300
+
 pkg-kde-tools (0.15.16ubuntu2) vivid; urgency=medium
 
   * Remove debian/KUBUNTU-BZR-WORKFLOW - we are moving to git.debian with
