@@ -1,3 +1,17 @@
+pkg-kde-tools (0.15.17ubuntu2) wily; urgency=medium
+
+  * Disable dh_auto_test for armhf PPA builds
+    + Since 99% of armhf PPA builds (that is excluding those from Canonical)
+      are run via qemu-arm and qemu-arm doesn't manage to run any of the
+      frameworks tests without segfaulting (either due to Qt or ctest, it's
+      not clear) almost all test runs would fail all the time because of qemu.
+      Since we cannot explicitly check if we are run through qemu-arm we'll
+      instead simply disable auto_test for this entire use case which should
+      be good enough for the time being anyway.
+      Reviewed by Jonathan...
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 01 Jun 2015 17:48:20 +0200
+
 pkg-kde-tools (0.15.17ubuntu1) wily; urgency=medium
 
   * Merge with Debian, remaining changes:
