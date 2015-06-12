@@ -3,7 +3,12 @@ pkg-kde-tools (0.15.18) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * pkgkde-mark-private-symbols: Fix a typo in my surname.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 02 Jun 2015 14:21:22 +0300
+  [ Diane Trout ]
+  * Modify pkg-kde-tools.install to install pkgkde-gensymbols
+    and pkgkde-symbolshelper, making them much more useful.
+    Hopefully Closes: #782866 again.
+
+ -- Diane Trout <diane@ghic.org>  Thu, 11 Jun 2015 19:08:36 -0700
 
 pkg-kde-tools (0.15.17) unstable; urgency=medium
 
