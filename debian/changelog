@@ -5,7 +5,7 @@ pkg-kde-tools (0.15.18) UNRELEASED; urgency=medium
 
   [ Diane Trout ]
   * Modify pkg-kde-tools.install to install pkgkde-gensymbols
-    and pkgkde-symbolshelper, making them much more useful.
+    and pkgkde-symbolshelper manpages, making them much more useful.
     Hopefully Closes: #782866 again.
 
  -- Diane Trout <diane@ghic.org>  Thu, 11 Jun 2015 19:08:36 -0700
