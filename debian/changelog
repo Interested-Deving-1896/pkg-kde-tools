@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.18) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.18) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
   * pkgkde-mark-private-symbols: Fix a typo in my surname.
@@ -12,7 +12,7 @@ pkg-kde-tools (0.15.18) UNRELEASED; urgency=medium
   * Add a /2/l10n-packages.mk providing a convenient ${kde-l10n:all} substvar
     to be added in Breaks/Replaces for packages that need it.
 
- -- Diane Trout <diane@ghic.org>  Thu, 11 Jun 2015 19:08:36 -0700
+ -- Didier Raboud <odyx@debian.org>  Fri, 03 Jul 2015 00:08:19 +0200
 
 pkg-kde-tools (0.15.17) unstable; urgency=medium
 
