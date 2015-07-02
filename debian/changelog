@@ -8,6 +8,10 @@ pkg-kde-tools (0.15.18) UNRELEASED; urgency=medium
     and pkgkde-symbolshelper manpages, making them much more useful.
     Hopefully Closes: #782866 again.
 
+  [ Didier Raboud ]
+  * Add a /2/l10n-packages.mk providing a convenient ${kde-l10n:all} substvar
+    to be added in Breaks/Replaces for packages that need it.
+
  -- Diane Trout <diane@ghic.org>  Thu, 11 Jun 2015 19:08:36 -0700
 
 pkg-kde-tools (0.15.17) unstable; urgency=medium
