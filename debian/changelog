@@ -1,3 +1,42 @@
+pkg-kde-tools (0.15.18ubuntu1) wily; urgency=low
+
+  * Merge from Debian unstable. (LP: #1475045) Remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk:
+      + Distribution text = "Kubuntu packages".
+    - debian/rules:
+      + Add rules to sync l10n.
+    - perllib/Debian/Debhelper/Sequence/kubuntu_l10n.pm:
+      + Add sequence for Debhelper.
+    - perllib/Debian/Debhelper/Sequence/{kf5,kde}.pm:
+      + Require kubuntu_l10n sequence.
+    - debian/pkg-kde-tools.install, kubuntu/*:
+      + Install kubuntu/ files and l10n scripts.
+    - qt-kde-team/{1,2,3}/policy.mk:
+      + Remove maintainer checking.
+    - qt-kde-team/{2,3}/lintian.mk:
+      + Call it after the binary target in
+        qt-kde-team/{2,3}/debian-qt-kde.mk.
+    - perllib/Debian/Debhelper/Sequence/kf5.pm:
+      + Disable dh_auto_test for armhf PPA builds.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Thu, 16 Jul 2015 00:22:40 +0200
+
+pkg-kde-tools (0.15.18) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * pkgkde-mark-private-symbols: Fix a typo in my surname.
+
+  [ Diane Trout ]
+  * Modify pkg-kde-tools.install to install pkgkde-gensymbols
+    and pkgkde-symbolshelper manpages, making them much more useful.
+    Hopefully Closes: #782866 again.
+
+  [ Didier Raboud ]
+  * Add a /2/l10n-packages.mk providing a convenient ${kde-l10n:all} substvar
+    to be added in Breaks/Replaces for packages that need it.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 03 Jul 2015 00:08:19 +0200
+
 pkg-kde-tools (0.15.17ubuntu2) wily; urgency=medium
 
   * Disable dh_auto_test for armhf PPA builds
@@ -167,7 +206,7 @@ pkg-kde-tools (0.15.14ubuntu1) utopic; urgency=medium
 
  -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 08 May 2014 12:29:28 +0200
 
-pkg-kde-tools (0.15.14) stable; urgency=medium
+pkg-kde-tools (0.15.14) unstable; urgency=medium
 
   [ William Grant ]
   * perllib/Debian/PkgKde/SymbolsHelper/Substs/TypeSubst.pm:
@@ -175,7 +214,10 @@ pkg-kde-tools (0.15.14) stable; urgency=medium
       erroneously mapping qreal to float on arm64.
     - Add arm64 and ppc64el to the 64-bit matches (Closes: #744173).
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 03 May 2014 10:12:14 +0400
+  [ Helmut Grohne ]
+  * Mark binary pkg-kde-tools as M-A:foreign. (Closes: #751338).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 12 Jul 2014 15:45:14 -0300
 
 pkg-kde-tools (0.15.13) unstable; urgency=medium
 
@@ -1974,4 +2016,3 @@ pkg-kde-tools (0.1) unstable; urgency=low
   * Initial Release.
 
  -- Sune Vuorela <debian@pusling.com>  Thu, 18 Sep 2008 21:39:35 +0200
-
