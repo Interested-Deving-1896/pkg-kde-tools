@@ -72,7 +72,10 @@ if (defined $dir) {
     *Dpkg::Shlibs::SymbolFile::parse = *new_symbolfile_parse;
 
     # Finally, run stock dpkg-gensymbols
-    do "$exe";
+    unless (do $exe) {
+        print STDERR $@;
+        exit 1;
+    }
 } else {
     print STDERR "pkgkde-gensymbols: unable to determine execution context.", "\n";
     exit 1;
