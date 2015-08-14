@@ -1,9 +1,10 @@
-pkg-kde-tools (0.15.19) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.19) unstable; urgency=medium
 
+  * Team upload.
   * Improve error handling in pkgkde-gensymbols.
     Previously it ignored exceptions from dpkg-gensymbols.
 
- -- Felix Geyer <fgeyer@debian.org>  Mon, 10 Aug 2015 23:54:16 +0200
+ -- Felix Geyer <fgeyer@debian.org>  Fri, 14 Aug 2015 19:10:10 +0200
 
 pkg-kde-tools (0.15.18) unstable; urgency=medium
 
