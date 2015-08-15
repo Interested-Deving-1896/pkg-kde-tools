@@ -1,5 +1,7 @@
 pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Minor fixes to pkgkde-mark-private-symbols.1 manpage.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 15 Aug 2015 14:29:11 +0300
 
