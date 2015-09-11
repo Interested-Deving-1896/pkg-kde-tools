@@ -19,7 +19,7 @@ use strict;
 use warnings;
 
 use Dpkg;
-use Debian::PkgKde qw(setup_datalibdir find_exe_in_path);
+use Debian::PkgKde qw(find_exe_in_path);
 
 my $old_symbolfile_parse;
 
@@ -53,31 +53,23 @@ sub check_dpkg_version {
 }
 
 my $exe = find_exe_in_path("dpkg-gensymbols", $0);
+unless ($exe) {
+    print STDERR "pkgkde-gensymbols: dpkg-gensymbols could not be found in PATH", "\n";
+    exit 1;
+}
 
-# Export global datalibdir if needed
-my $dir = setup_datalibdir(qw(Dpkg/Shlibs/SymbolFile.pm));
-if (defined $dir) {
-    unless ($exe) {
-	print STDERR "pkgkde-gensymbols: dpkg-gensymbols could not be found in PATH", "\n";
-	exit 1;
-    }
+eval "use Dpkg::Shlibs::SymbolFile";
+eval "use Debian::PkgKde::SymbolsHelper::Symbol";
 
-    eval "use Dpkg::Shlibs::SymbolFile";
-    eval "use Debian::PkgKde::SymbolsHelper::Symbol";
+# Replace Dpkg::Shlibs::SymbolFile::load with a custom version
+# which uses Debian::PkgKde::SymbolsHelper::Symbol rather than
+# Dpkg::Shlibs::Symbol
+$old_symbolfile_parse = *Dpkg::Shlibs::SymbolFile::parse;
+*Dpkg::Shlibs::SymbolFile::parse = *new_symbolfile_parse;
 
-    # Replace Dpkg::Shlibs::SymbolFile::load with a custom version
-    # which uses Debian::PkgKde::SymbolsHelper::Symbol rather than
-    # Dpkg::Shlibs::Symbol
-    $old_symbolfile_parse = *Dpkg::Shlibs::SymbolFile::parse;
-    *Dpkg::Shlibs::SymbolFile::parse = *new_symbolfile_parse;
-
-    # Finally, run stock dpkg-gensymbols
-    unless (do $exe) {
-        print STDERR $@;
-        exit 1;
-    }
-} else {
-    print STDERR "pkgkde-gensymbols: unable to determine execution context.", "\n";
+# Finally, run stock dpkg-gensymbols
+unless (do $exe) {
+    print STDERR $@;
     exit 1;
 }
 

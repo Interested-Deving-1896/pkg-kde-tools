@@ -3,6 +3,13 @@ pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Minor fixes to pkgkde-mark-private-symbols.1 manpage.
 
+  [ Maximiliano Curia ]
+  * Drop stale copy of Dpkg/Shlibs (2010-02-21), and use the ones from
+    libdpkg-perl instead.
+    - Drop the find_datalibdir and setup_datalibdir functions and the
+      DATALIBDIR global variable.
+    - Adapt pkgkde-gensymbols and pkgkde-symbolshelper accordingly.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 15 Aug 2015 14:29:11 +0300
 
 pkg-kde-tools (0.15.19) unstable; urgency=medium
