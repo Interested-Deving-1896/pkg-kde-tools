@@ -1,3 +1,27 @@
+pkg-kde-tools (0.15.20~ubuntu1) xenial; urgency=medium
+
+  * Merge from Debian unstable.  Remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk:
+      + Distribution text = "Kubuntu packages".
+    - debian/rules:
+      + Add rules to sync l10n.
+    - perllib/Debian/Debhelper/Sequence/kubuntu_l10n.pm:
+      + Add sequence for Debhelper.
+    - perllib/Debian/Debhelper/Sequence/{kf5,kde}.pm:
+      + Require kubuntu_l10n sequence.
+    - debian/pkg-kde-tools.install, kubuntu/*:
+      + Install kubuntu/ files and l10n scripts.
+    - qt-kde-team/{1,2,3}/policy.mk:
+      + Remove maintainer checking.
+    - qt-kde-team/{2,3}/lintian.mk:
+      + Call it after the binary target in
+        qt-kde-team/{2,3}/debian-qt-kde.mk.
+    - perllib/Debian/Debhelper/Sequence/kf5.pm:
+      + Disable dh_auto_test for armhf PPA builds.
+  * Add missing file from Debian qt-kde-team/2/l10n-packages.mk
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 08 Dec 2015 11:33:48 +0000
+
 pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
@@ -12,6 +36,29 @@ pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 15 Aug 2015 14:29:11 +0300
 
+pkg-kde-tools (0.15.19ubuntu1) wily; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk:
+      + Distribution text = "Kubuntu packages".
+    - debian/rules:
+      + Add rules to sync l10n.
+    - perllib/Debian/Debhelper/Sequence/kubuntu_l10n.pm:
+      + Add sequence for Debhelper.
+    - perllib/Debian/Debhelper/Sequence/{kf5,kde}.pm:
+      + Require kubuntu_l10n sequence.
+    - debian/pkg-kde-tools.install, kubuntu/*:
+      + Install kubuntu/ files and l10n scripts.
+    - qt-kde-team/{1,2,3}/policy.mk:
+      + Remove maintainer checking.
+    - qt-kde-team/{2,3}/lintian.mk:
+      + Call it after the binary target in
+        qt-kde-team/{2,3}/debian-qt-kde.mk.
+    - perllib/Debian/Debhelper/Sequence/kf5.pm:
+      + Disable dh_auto_test for armhf PPA builds.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Sun, 16 Aug 2015 22:38:44 +0200
+
 pkg-kde-tools (0.15.19) unstable; urgency=medium
 
   * Team upload.
@@ -19,6 +66,36 @@ pkg-kde-tools (0.15.19) unstable; urgency=medium
     Previously it ignored exceptions from dpkg-gensymbols.
 
  -- Felix Geyer <fgeyer@debian.org>  Fri, 14 Aug 2015 19:10:10 +0200
+
+pkg-kde-tools (0.15.18ubuntu2) wily; urgency=medium
+
+  * Restore adjustment to linitan.mk such that it doesn't fail on binary only
+    builds on account of not finding a dsc
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 01 Sep 2015 13:20:08 +0200
+
+pkg-kde-tools (0.15.18ubuntu1) wily; urgency=low
+
+  * Merge from Debian unstable. (LP: #1475045) Remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk:
+      + Distribution text = "Kubuntu packages".
+    - debian/rules:
+      + Add rules to sync l10n.
+    - perllib/Debian/Debhelper/Sequence/kubuntu_l10n.pm:
+      + Add sequence for Debhelper.
+    - perllib/Debian/Debhelper/Sequence/{kf5,kde}.pm:
+      + Require kubuntu_l10n sequence.
+    - debian/pkg-kde-tools.install, kubuntu/*:
+      + Install kubuntu/ files and l10n scripts.
+    - qt-kde-team/{1,2,3}/policy.mk:
+      + Remove maintainer checking.
+    - qt-kde-team/{2,3}/lintian.mk:
+      + Call it after the binary target in
+        qt-kde-team/{2,3}/debian-qt-kde.mk.
+    - perllib/Debian/Debhelper/Sequence/kf5.pm:
+      + Disable dh_auto_test for armhf PPA builds.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Thu, 16 Jul 2015 00:22:40 +0200
 
 pkg-kde-tools (0.15.18) unstable; urgency=medium
 
@@ -36,6 +113,35 @@ pkg-kde-tools (0.15.18) unstable; urgency=medium
 
  -- Didier Raboud <odyx@debian.org>  Fri, 03 Jul 2015 00:08:19 +0200
 
+pkg-kde-tools (0.15.17ubuntu2) wily; urgency=medium
+
+  * Disable dh_auto_test for armhf PPA builds
+    + Since 99% of armhf PPA builds (that is excluding those from Canonical)
+      are run via qemu-arm and qemu-arm doesn't manage to run any of the
+      frameworks tests without segfaulting (either due to Qt or ctest, it's
+      not clear) almost all test runs would fail all the time because of qemu.
+      Since we cannot explicitly check if we are run through qemu-arm we'll
+      instead simply disable auto_test for this entire use case which should
+      be good enough for the time being anyway.
+      Reviewed by Jonathan...
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 01 Jun 2015 17:48:20 +0200
+
+pkg-kde-tools (0.15.17ubuntu1) wily; urgency=medium
+
+  * Merge with Debian, remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk: distribution text = "Kubuntu packages"
+    - debian/rules: add rules to sync l10n
+    - Add l10n scripts in kubuntu/
+    - Add kubuntu_l10n.pm sequence for Debhelper
+    - Require kubuntu_l10n sequence in {kf5,kde}.pm sequence
+    - debian/pkg-kde-tools.install: install kubuntu/ files
+    - qt-kde-team/{1,2,3}/policy.mk: remove maintainer checking
+    - Add qt-kde-team/{2,3}/lintian.mk and call it after the binary target in
+      qt-kde-team/{2,3}/debian-qt-kde.mk
+
+ -- Harald Sitter <sitter@kde.org>  Fri, 15 May 2015 17:04:16 +0200
+
 pkg-kde-tools (0.15.17) unstable; urgency=medium
 
   [ Diane Trout ]
@@ -48,6 +154,55 @@ pkg-kde-tools (0.15.17) unstable; urgency=medium
   * Release to unstable.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 13 May 2015 09:40:11 -0300
+
+pkg-kde-tools (0.15.16ubuntu2) vivid; urgency=medium
+
+  * Remove debian/KUBUNTU-BZR-WORKFLOW - we are moving to git.debian with
+    our delta
+  * Bring back kubuntu_l10n dh sequence.
+    - This sequence was lost in the kf5 port.
+    - It is by default pulled into the kf5 and kde sequence as well.
+    - The logic itself is noop unless previously established l10n
+      requirements are met.
+  * Apply 'remove maintainer checking' to qt-kde-team/3/policy.mk
+  * Update syncl10n target and settings for kf5, refresh.
+    + preparetips is no longer being pulled in. As far as our uses go
+      it is an optional utility and since we do not use tips in our
+      applications it is useless for us. Supposedly it was a left over from
+      when all kde apps were imported into launchpad.
+    + we are intentionally using the kf5 tools across both kde4libs and kf5
+      software because I am lazy. Potentially incomplete message extraction is
+      still better than no message extraction...
+  * New list of remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk: distribution text = "Kubuntu packages"
+    - debian/rules: add rules to sync l10n
+    - Add l10n scripts in kubuntu/
+    - Add kubuntu_l10n.pm sequence for Debhelper
+    - Require kubuntu_l10n sequence in {kf5,kde}.pm sequence
+    - debian/pkg-kde-tools.install: install kubuntu/ files
+    - qt-kde-team/{1,2,3}/policy.mk: remove maintainer checking
+    - qt-kde-team/{2,3}/debian-qt-kde.mk: run list-missing after the binary target
+    - qt-kde-team/{2,3}/list-missing.mk: print marker before and after list-missing
+      output for script parsing
+    - Add qt-kde-team/{2,3}/lintian.mk and call it in qt-kde-team/{2,3}/debian-qt-kde.mk
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 16 Feb 2015 10:12:07 +0100
+
+pkg-kde-tools (0.15.16ubuntu1) vivid; urgency=medium
+
+  * Merge with Debian experimental, remaining changes:
+    - qt-kde-team/1/debian-qt-kde.mk: distribution text = "Kubuntu packages"
+    - debian/rules: add rules to sync l10n
+    - add debian/KUBUNTU-BZR-WORKFLOW
+    - Add l10n scripts in kubuntu/
+    - debian/pkg-kde-tools.install: install kubuntu/ files
+    - qt-kde-team/{1,2}/policy.mk: remove maintainer checking
+    - qt-kde-team/{2,3}/debian-qt-kde.mk: run list-missing after the binary target
+    - qt-kde-team/{2,3}/list-missing.mk: print marker before and after list-missing
+      output for script parsing
+    - Add qt-kde-team/{2,3}/lintian.mk and call it in qt-kde-team/{2,3}/debian-qt-kde.mk
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Jan 2015 14:20:34 +0300
 
 pkg-kde-tools (0.15.16) experimental; urgency=medium
 
