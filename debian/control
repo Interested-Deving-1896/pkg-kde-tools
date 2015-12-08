@@ -1,7 +1,7 @@
 Source: pkg-kde-tools
 Section: devel
 Priority: extra
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: cmake (>= 2.6.4), debhelper (>= 9), libdpkg-perl (>= 1.15.6~)
 Standards-Version: 3.9.6
 Uploaders: Sune Vuorela <sune@debian.org>,
