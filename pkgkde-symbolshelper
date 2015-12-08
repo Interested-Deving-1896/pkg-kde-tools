@@ -18,11 +18,6 @@
 use strict;
 use warnings;
 
-use Debian::PkgKde qw(setup_datalibdir);
-BEGIN {
-    setup_datalibdir("Dpkg/Shlibs/SymbolFile.pm");
-}
-
 use File::Spec;
 use File::Basename qw();
 use File::Copy qw();

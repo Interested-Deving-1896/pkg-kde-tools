@@ -21,52 +21,7 @@ use Cwd qw(realpath);
 use base qw(Exporter);
 our @EXPORT = qw(get_program_name
     printmsg info warning errormsg error syserr usageerr);
-our @EXPORT_OK = qw(find_datalibdir setup_datalibdir find_exe_in_path DATALIBDIR);
-
-# Determine datalib for current script. It depends on the context the script
-# was executed from.
-use constant DATALIBDIR => '/usr/share/pkg-kde-tools/lib';
-
-sub find_datalibdir {
-    my @hintfiles = @_;
-    my @dirs;
-    if ($0 =~ m@^(.+)/[^/]+$@) {
-	push @dirs, "$1/datalib";
-    }
-    push @dirs, DATALIBDIR;
-
-    # Verify if the dir and hint files exist
-    my $founddir;
-    foreach my $dir (@dirs) {
-	my $ok;
-	if ($dir && -d $dir) {
-	    $ok = 1;
-	    foreach my $hint (@hintfiles) {
-		unless (-e "$dir/$hint") {
-		    $ok = 0;
-		    last;
-		}
-	    }
-	}
-	if ($ok) {
-	    $founddir = $dir;
-	    last;
-	}
-    }
-
-    return $founddir;
-}
-
-# Add DATALIBDIR to @INC if the script is NOT being run from the source tree.
-sub setup_datalibdir {
-    my $dir = find_datalibdir(@_);
-    if ($dir) {
-	unshift @INC, DATALIBDIR if $dir eq DATALIBDIR;
-    } else {
-	error("unable to locate pkg-kde-tools library directory");
-    }
-    return $dir;
-}
+our @EXPORT_OK = qw(find_exe_in_path);
 
 sub find_exe_in_path {
     my ($exe, @exclude) = @_;

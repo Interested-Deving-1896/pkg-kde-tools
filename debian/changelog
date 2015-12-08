@@ -1,12 +1,76 @@
-pkg-kde-tools (0.15.16) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Minor fixes to pkgkde-mark-private-symbols.1 manpage.
+
+  [ Maximiliano Curia ]
+  * Drop stale copy of Dpkg/Shlibs (2010-02-21), and use the ones from
+    libdpkg-perl instead.
+    - Drop the find_datalibdir and setup_datalibdir functions and the
+      DATALIBDIR global variable.
+    - Adapt pkgkde-gensymbols and pkgkde-symbolshelper accordingly.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 15 Aug 2015 14:29:11 +0300
+
+pkg-kde-tools (0.15.19) unstable; urgency=medium
+
+  * Team upload.
+  * Improve error handling in pkgkde-gensymbols.
+    Previously it ignored exceptions from dpkg-gensymbols.
+
+ -- Felix Geyer <fgeyer@debian.org>  Fri, 14 Aug 2015 19:10:10 +0200
+
+pkg-kde-tools (0.15.18) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * pkgkde-mark-private-symbols: Fix a typo in my surname.
+
+  [ Diane Trout ]
+  * Modify pkg-kde-tools.install to install pkgkde-gensymbols
+    and pkgkde-symbolshelper manpages, making them much more useful.
+    Hopefully Closes: #782866 again.
+
+  [ Didier Raboud ]
+  * Add a /2/l10n-packages.mk providing a convenient ${kde-l10n:all} substvar
+    to be added in Breaks/Replaces for packages that need it.
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 03 Jul 2015 00:08:19 +0200
+
+pkg-kde-tools (0.15.17) unstable; urgency=medium
+
+  [ Diane Trout ]
+  * Add man pages for pkgkde-gensymbols and pkgkde-symbolshelper
+    (Closes: #782866).
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add pkgkde-mark-private-symbols to avoid shipping the script on every
+    Qt5 package.
+  * Release to unstable.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 13 May 2015 09:40:11 -0300
+
+pkg-kde-tools (0.15.16) experimental; urgency=medium
 
   [ Rohan Garg ]
-  * Add packaging for Frameworks 5 packages:
-   - datalib/kf5_flags
-   - Debhelper buildsystem and sequence flags
-   - qt-kde-team/3 include scripts
+  * Add new sequence helpers for KDE Frameowrks 5
+  * Drop useless code from KDE Frameworks time
+  * Use the KF5 sequence helper
+  * Fix sillyness
+  * Fix sequence to use KF5 instead of KDE4
+  * More misc. fixes for the KF5 sequence
+  * meinproc4 is no more in KF5 land, all hail meinproc5
+  * Nuke auto_configure duplication, doesn't make sense since we source the KF5 sequence
+  * Remove useless pkg-kde-tools.kdev4 file
+  * Make sure we don't link to libkdeinit5_ explicitly
+  * Make sure ECM_MKSPECS_INSTALL_DIR is also passed
+  * Add proper marker while passing ECM_MKSPECS_INSTALL_DIR
+  * Use KDE_INSTALL_USE_QT_SYS_PATHS to do the right thing automatically. and drop useless calls.
+  * dpkg_architecture_value isn't used, remove
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Sep 2014 14:50:15 +0200
+  [ Maximiliano Curia ]
+  * Bump Standards-Version to 3.9.6, no changes needed
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 20 Jan 2015 13:24:21 +0100
 
 pkg-kde-tools (0.15.15ubuntu1) utopic; urgency=medium
 

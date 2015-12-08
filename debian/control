@@ -2,8 +2,8 @@ Source: pkg-kde-tools
 Section: devel
 Priority: extra
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: debhelper (>= 9), libdpkg-perl (>= 1.15.6~), cmake (>= 2.6.4)
-Standards-Version: 3.9.5
+Build-Depends: cmake (>= 2.6.4), debhelper (>= 9), libdpkg-perl (>= 1.15.6~)
+Standards-Version: 3.9.6
 Uploaders: Sune Vuorela <sune@debian.org>,
            Modestas Vainius <modax@debian.org>,
            Maximiliano Curia <maxy@debian.org>,
@@ -14,11 +14,10 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/pkg-kde-tools.git;a=sum
 Package: pkg-kde-tools
 Architecture: all
 Multi-Arch: foreign
-Depends: ${perl:Depends}, ${misc:Depends}, libdpkg-perl (>= 1.15.6~),
- lintian
+Depends: libdpkg-perl (>= 1.15.6~), lintian, ${misc:Depends}, ${perl:Depends}
 Recommends: dpkg-dev (>= 1.15.6~), libwww-perl
-Suggests: debhelper (>= 7.3.16), cdbs
-Breaks: kdelibs5-dev (<< 4:4.2.2), dpkg-dev (<< 1.15.6~)
+Suggests: cdbs, debhelper (>= 7.3.16)
+Breaks: dpkg-dev (<< 1.15.6~), kdelibs5-dev (<< 4:4.2.2)
 Description: various packaging tools and scripts for KDE Applications
  This package contains a variety of packaging tools and build scripts that may
  be very useful when packaging KDE applications. Even if you are a maintainer
@@ -54,7 +53,7 @@ Description: various packaging tools and scripts for KDE Applications
 Package: libdlrestrictions1
 Architecture: any
 Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: library that implements library compatibility checks for dlopen()
  This package provides a DLRestrictions library that can be used to check
  compatibility of the external shared library (or plugin) against other

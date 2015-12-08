@@ -19,18 +19,20 @@
 ifdef dqk_dir
 
 list-missing:
-	@if test -d debian/tmp; then \
-	  echo "=== Start list-missing"; \
+	@echo "=== Start list-missing"; \
+	if test -d debian/tmp; then \
 	  (cd debian/tmp && find . -type f -o -type l | grep -v '/DEBIAN/' | sort) > debian/dhmk-install-list; \
 	  (for package in $(shell dh_listpackages); do \
 	     (cd debian/$$package && find . -type f -o -type l); \
 	   done; \
-	   test -e debian/not-installed && grep -v '^#' debian/not-installed; \
+	   test -e debian/not-installed && sed '/^#/d;/^$$/d;s|/$$||;/^\.\//!s|^|./|' debian/not-installed | \
+	     while read glob_patt; do \
+	       (cd debian/tmp; find . '(' -path "$${glob_patt}" -o -path "$${glob_patt}"'/*' ')' '(' -type f -o -type l ')'); \
+	   done; \
 	   ) | sort -u > debian/dhmk-package-list; \
 	  diff -u debian/dhmk-install-list debian/dhmk-package-list | sed '1,2d' | egrep '^-' || true; \
 	  echo "=== End list-missing"; \
 	else \
-	  echo "=== Start list-missing"; \
 	  echo "=== End list-missing"; \
 	  echo "All files were installed into debian/$(shell dh_listpackages | head -n1)."; \
 	fi
