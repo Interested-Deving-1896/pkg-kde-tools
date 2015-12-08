@@ -1,3 +1,10 @@
+pkg-kde-tools (0.15.20~ubuntu2) xenial; urgency=medium
+
+  * Drop the ECM_MKSPECS_INSTALL_DIR override in kf5.pm, it's obsolete and
+    uses an inexistent function call
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 08 Dec 2015 22:41:11 +0100
+
 pkg-kde-tools (0.15.20~ubuntu1) xenial; urgency=medium
 
   * Merge from Debian unstable.  Remaining changes:
