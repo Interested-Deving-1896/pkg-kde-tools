@@ -6,6 +6,7 @@ usr/bin/pkgkde-gensymbols
 usr/bin/pkgkde-getbuildlogs
 usr/bin/pkgkde-git
 usr/bin/pkgkde-mark-private-symbols
+usr/bin/pkgkde-mark-qt5-private-symbols
 usr/bin/pkgkde-override-sc-dev-latest
 usr/bin/pkgkde-symbolshelper
 usr/bin/pkgkde-vcs
