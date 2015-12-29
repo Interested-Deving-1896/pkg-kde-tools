@@ -6,6 +6,8 @@ pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
     for the old script (pkgkde-mark-private-symbols) that works with Qt ≥ 5.6.
     - Add dependency on python3:any for this script.
     - Write the manual page for this script.
+  * Drop obsolete debian/source/options file. We do not want to force bzip2
+    compression now that xz is the dpkg default.
 
   [ Maximiliano Curia ]
   * Drop stale copy of Dpkg/Shlibs (2010-02-21), and use the ones from
