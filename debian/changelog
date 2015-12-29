@@ -5,6 +5,7 @@ pkg-kde-tools (0.15.20) UNRELEASED; urgency=medium
   * Add a new script (pkgkde-mark-qt5-private-symbols) which is a replacement
     for the old script (pkgkde-mark-private-symbols) that works with Qt ≥ 5.6.
     - Add dependency on python3:any for this script.
+    - Write the manual page for this script.
 
   [ Maximiliano Curia ]
   * Drop stale copy of Dpkg/Shlibs (2010-02-21), and use the ones from
