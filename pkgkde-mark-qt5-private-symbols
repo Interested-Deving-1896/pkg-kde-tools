@@ -36,6 +36,7 @@ from sys import stdout, stderr
 def process_symbols_file(symbols_file_path, write_results=False):
     old_lines = []
     new_lines = []
+    has_alternative = False
     with open(symbols_file_path) as symbols_file:
         for line in symbols_file:
             old_lines.append(line)
@@ -44,8 +45,13 @@ def process_symbols_file(symbols_file_path, write_results=False):
                 line = line[:-2]
             if '@Qt_5_PRIVATE_API' in line:
                 line += ' 1'
+            if line.startswith('| '):
+                has_alternative = True
             new_lines.append(line + '\n')
-    if write_results:
+    if not has_alternative:
+        print('Skipping file %s, no alternative dependency specified.' %
+              symbols_file_path)
+    elif write_results:
         with open(symbols_file_path, 'w') as symbols_file:
             for line in new_lines:
                 symbols_file.write(line)
