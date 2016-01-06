@@ -1,3 +1,9 @@
+pkg-kde-tools (0.15.20~ubuntu3) xenial; urgency=medium
+
+  * In ubuntu, the cavalencia l10n package is called ca-valencia 
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Wed, 06 Jan 2016 22:39:25 +0100
+
 pkg-kde-tools (0.15.20~ubuntu2) xenial; urgency=medium
 
   * Drop the ECM_MKSPECS_INSTALL_DIR override in kf5.pm, it's obsolete and
