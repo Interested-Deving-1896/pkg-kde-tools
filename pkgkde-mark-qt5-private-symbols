@@ -58,13 +58,17 @@ def process_symbols_file(symbols_file_path, write_results=False):
 
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
-    parser.add_argument('--write-results',
-                        help='write results back into symbols files',
-                        action='store_true')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--write-results',
+                       help='write results back into symbols files (default)',
+                       action='store_false')
+    group.add_argument('--print-diff',
+                       help='print diffs into stdout instead of applying them',
+                       action='store_true')
     args = parser.parse_args()
 
     symbols_files = glob('debian/*.symbols')
     if not symbols_files:
         print('No symbols files found!', file=stderr)
     for symbols_file_path in symbols_files:
-        process_symbols_file(symbols_file_path, args.write_results)
+        process_symbols_file(symbols_file_path, not args.print_diff)

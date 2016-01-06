@@ -1,5 +1,9 @@
 pkg-kde-tools (0.15.21) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * pkgkde-mark-qt5-private-symbols:
+    - Make --write-results option the default, add option --print-diff for the
+      old behavior.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 06 Jan 2016 20:52:49 +0300
 
