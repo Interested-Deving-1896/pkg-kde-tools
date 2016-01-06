@@ -9,7 +9,7 @@ Uploaders: Sune Vuorela <sune@debian.org>,
            Maximiliano Curia <maxy@debian.org>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Vcs-Git: git://anonscm.debian.org/pkg-kde/pkg-kde-tools.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/pkg-kde-tools.git;a=summary
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/pkg-kde-tools.git
 
 Package: pkg-kde-tools
 Architecture: all
