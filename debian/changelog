@@ -1,3 +1,9 @@
+pkg-kde-tools (0.15.20~ubuntu4) xenial; urgency=medium
+
+  * Add eo to the locale list 
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 07 Jan 2016 21:37:10 +0100
+
 pkg-kde-tools (0.15.20~ubuntu3) xenial; urgency=medium
 
   * In ubuntu, the cavalencia l10n package is called ca-valencia 
