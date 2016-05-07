@@ -8,6 +8,9 @@ pkg-kde-tools (0.15.21) UNRELEASED; urgency=medium
       specified in the symbols file.
   * Use canonical URL in Vcs-Browser field.
 
+  [ Maximiliano Curia ]
+  * pkgkde-symbolshelper: Add time_t type substitution.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 06 Jan 2016 20:52:49 +0300
 
 pkg-kde-tools (0.15.20) unstable; urgency=medium
