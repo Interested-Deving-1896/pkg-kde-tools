@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.21~) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.21) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
   * pkgkde-mark-qt5-private-symbols:
@@ -11,7 +11,7 @@ pkg-kde-tools (0.15.21~) UNRELEASED; urgency=medium
   [ Maximiliano Curia ]
   * pkgkde-symbolshelper: Add time_t type substitution.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 06 Jan 2016 20:52:49 +0300
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 08 May 2016 10:38:28 +0200
 
 pkg-kde-tools (0.15.20) unstable; urgency=medium
 
