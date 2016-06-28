@@ -1,8 +1,8 @@
-pkg-kde-tools (0.15.21~bpo8+1) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.21~bpo8+1) jessie-backports; urgency=medium
 
-  * Prepare a jessie backport.
+  * Jessie backport.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 28 Jun 2016 20:20:16 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 28 Jun 2016 20:24:47 -0300
 
 pkg-kde-tools (0.15.21) unstable; urgency=medium
 
