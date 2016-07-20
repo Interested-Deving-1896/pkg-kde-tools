@@ -8,6 +8,7 @@ pkg-kde-tools (0.15.22) UNRELEASED; urgency=medium
     supported in recent versions, and its usage breaks functionalities
     (e.g. the QFINDTESTDATA system in Qt 5).
   * Fix typo in copyright.
+  * Bump Standards-Version to 3.9.8, no changes required.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 23 Jun 2016 22:26:54 +0300
 
