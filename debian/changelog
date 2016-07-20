@@ -7,6 +7,7 @@ pkg-kde-tools (0.15.22) UNRELEASED; urgency=medium
   * Drop -DCMAKE_USE_RELATIVE_PATHS=ON from the CMake flags: it is no more
     supported in recent versions, and its usage breaks functionalities
     (e.g. the QFINDTESTDATA system in Qt 5).
+  * Fix typo in copyright.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 23 Jun 2016 22:26:54 +0300
 
