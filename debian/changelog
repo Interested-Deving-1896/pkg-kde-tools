@@ -3,6 +3,11 @@ pkg-kde-tools (0.15.22) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * pkgkde-symbolshelper: Add type substitution for long double.
 
+  [ Pino Toscano ]
+  * Drop -DCMAKE_USE_RELATIVE_PATHS=ON from the CMake flags: it is no more
+    supported in recent versions, and its usage breaks functionalities
+    (e.g. the QFINDTESTDATA system in Qt 5).
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 23 Jun 2016 22:26:54 +0300
 
 pkg-kde-tools (0.15.21) unstable; urgency=medium
