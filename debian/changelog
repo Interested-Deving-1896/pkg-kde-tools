@@ -1,11 +1,10 @@
-pkg-kde-tools (0.15.23) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.23) unstable; urgency=medium
 
-  [ Pino Toscano ]
   * Add myself to Uploaders.
   * dh_sodeps: make it work also for libraries in the multiarch directory.
   * dh_sameversiondep: fix typo in documentation.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 27 Aug 2016 09:34:05 +0200
+ -- Pino Toscano <pino@debian.org>  Sat, 27 Aug 2016 09:53:43 +0200
 
 pkg-kde-tools (0.15.22) unstable; urgency=medium
 
