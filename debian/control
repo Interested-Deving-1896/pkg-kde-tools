@@ -7,7 +7,8 @@ Standards-Version: 3.9.8
 Uploaders: Sune Vuorela <sune@debian.org>,
            Modestas Vainius <modax@debian.org>,
            Maximiliano Curia <maxy@debian.org>,
-           Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
+           Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
+           Pino Toscano <pino@debian.org>,
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/pkg-kde-tools.git
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/pkg-kde-tools.git
 
