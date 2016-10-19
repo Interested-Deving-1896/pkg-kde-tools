@@ -1,5 +1,8 @@
 pkg-kde-tools (0.15.24) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * pkgkde-symbolshelper: Do not pass stderr handle to Dpkg::IPC::spawn,
+    to workaround #839905 (patch does not print to stderr anyway).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 19 Oct 2016 20:46:40 +0300
 
