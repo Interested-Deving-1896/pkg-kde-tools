@@ -150,6 +150,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::size_t;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -161,7 +162,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'm' : 'j';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'm' : 'j';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::ssize_t;
@@ -169,6 +171,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::ssize_t;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -180,7 +183,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'l' : 'i';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'l' : 'i';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::int64_t;
@@ -188,6 +192,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::int64_t;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -199,7 +204,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'l' : 'x';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'l' : 'x';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::uint64_t;
@@ -207,6 +213,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::uint64_t;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -218,7 +225,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'm' : 'y';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'm' : 'y';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::qptrdiff;
@@ -226,6 +234,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::qptrdiff;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -237,7 +246,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'x' : 'i';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'x' : 'i';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::quintptr;
@@ -245,6 +255,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::quintptr;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -256,7 +267,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'y' : 'j';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'y' : 'j';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::intptr_t;
@@ -264,6 +276,7 @@ package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::intptr_t;
 use strict;
 use warnings;
 use base 'Debian::PkgKde::SymbolsHelper::Substs::TypeSubst';
+use Dpkg::Arch qw(debarch_to_cpuattrs);
 
 sub new {
     my $class = shift;
@@ -275,7 +288,8 @@ sub new {
 
 sub _expand {
     my ($self, $arch) = @_;
-    return ($arch =~ /^(amd64|kfreebsd-amd64|ia64|alpha|s390x|sparc64|ppc64|ppc64el|mips64|mips64el|arm64)$/) ? 'l' : 'i';
+    my ($bits, $endian) = debarch_to_cpuattrs($arch);
+    return $bits == 64 ? 'l' : 'i';
 }
 
 package Debian::PkgKde::SymbolsHelper::Substs::TypeSubst::qreal;
