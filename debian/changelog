@@ -3,6 +3,9 @@ pkg-kde-tools (0.15.25) UNRELEASED; urgency=medium
   [ Helmut Grohne ]
   * Make bit-dependent type substitutions work generically (Closes: #854493).
 
+  [ Maximiliano Curia ]
+  * (l10n-packages.mk) Add missing ast and eo langs
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 27 Jun 2017 15:44:05 +0300
 
 pkg-kde-tools (0.15.24) unstable; urgency=medium
