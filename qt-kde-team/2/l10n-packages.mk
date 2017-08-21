@@ -8,7 +8,7 @@ ifneq (,$(l10npkgs_firstversion_ok))
 
 l10npkgs_prefix := kde-l10n
 l10npkgs_fixed_version_comma := (<< $(l10npkgs_firstversion_ok)),
-l10npkgs_langs := ar ast bg bs ca cavalencia cs da de el eo engb es et eu fa fi fr ga gl he hi hr hu ia id is it ja kk km ko lt lv mr nb nds nl nn pa pl pt ptbr ro ru sk sl sr sv tr ug uk wa zhcn zhtw
+l10npkgs_langs := ar ast bg bs ca cavalencia cs da de el engb eo es et eu fa fi fr ga gl he hi hr hu ia id is it ja kk km ko lt lv mr nb nds nl nn pa pl pt ptbr ro ru sk sl sr sv tr ug uk wa zhcn zhtw
 l10npkgs_packages_rels := $(patsubst %,$(l10npkgs_prefix)-% $(l10npkgs_fixed_version_comma),$(l10npkgs_langs))
 
 l10npkgs_firstversion_ok:
