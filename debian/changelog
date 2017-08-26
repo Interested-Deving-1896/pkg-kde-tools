@@ -6,6 +6,10 @@ pkg-kde-tools (0.15.25) UNRELEASED; urgency=medium
   [ Maximiliano Curia ]
   * (l10n-packages.mk) Add missing ast and eo langs
 
+  [ Dmitry Shachnev ]
+  * pkgkde-vcs: Add jessie and stretch to supported distributions (Closes:
+    #873243). Thanks to Sandro Knauß for the initial patch.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 27 Jun 2017 15:44:05 +0300
 
 pkg-kde-tools (0.15.24) unstable; urgency=medium
