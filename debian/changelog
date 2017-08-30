@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.25) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.25) unstable; urgency=medium
 
   [ Helmut Grohne ]
   * Make bit-dependent type substitutions work generically (Closes: #854493).
@@ -13,7 +13,7 @@ pkg-kde-tools (0.15.25) UNRELEASED; urgency=medium
     strip epoch numbers, and replace tildes with underscores.
   * Bump Standards-Version to 4.1.0, stop using deprecated Priority: extra.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 27 Jun 2017 15:44:05 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 30 Aug 2017 17:30:03 +0300
 
 pkg-kde-tools (0.15.24) unstable; urgency=medium
 
