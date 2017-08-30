@@ -9,6 +9,8 @@ pkg-kde-tools (0.15.25) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * pkgkde-vcs: Add jessie and stretch to supported distributions (Closes:
     #873243). Thanks to Sandro Knauß for the initial patch.
+  * pkgkde-vcs: Make Git version mangling more close to DEP-14: do not
+    strip epoch numbers, and replace tildes with underscores.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 27 Jun 2017 15:44:05 +0300
 

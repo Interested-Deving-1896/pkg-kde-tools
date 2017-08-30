@@ -24,7 +24,7 @@ git_tag()
     is_distribution_valid || die "invalid Debian distribution for tagging - $DEB_DISTRIBUTION"
     git_is_working_tree_clean || die "working tree is dirty. Commit changes before tagging."
 
-    tag_path="debian/`git_compat_debver $DEB_VERSION_WO_EPOCH`"
+    tag_path="debian/`git_compat_debver $DEB_VERSION`"
     tag_msg="$DEB_VERSION $DEB_DISTRIBUTION; urgency=$DEB_URGENCY"
 
     runcmd git tag $tag_path -m "$tag_msg" "$@"
@@ -127,7 +127,7 @@ git_update_config()
 
 git_compat_debver()
 {
-    echo "$1" | tr "~" "-"
+    echo "$1" | tr ":" "%" | tr "~" "_"
 }
 
 git_is_working_tree_clean()

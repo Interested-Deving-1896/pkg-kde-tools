@@ -131,9 +131,7 @@ get_debian_package_info()
     if [ -f "$rootdir/debian/changelog" ]; then
         _pchangelog="$(dpkg-parsechangelog "-l$rootdir/debian/changelog")"
         DEB_VERSION="$(echo "$_pchangelog" | _get_deb_field 'Version')"
-        if [ -n "$DEB_VERSION" ]; then
-            DEB_VERSION_WO_EPOCH=$(echo $DEB_VERSION | sed 's/^[[:digit:]]\+://')
-        else
+        if [ -z "$DEB_VERSION" ]; then
             die "unable to determine package version."
         fi
         DEB_SOURCE="$(echo "$_pchangelog" | _get_deb_field 'Source')"
