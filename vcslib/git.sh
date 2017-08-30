@@ -127,7 +127,7 @@ git_update_config()
 
 git_compat_debver()
 {
-    echo "$1" | tr ":" "%" | tr "~" "_"
+    echo "$1" | perl -pe 'y/:~/%_/;s/\.(?=\.|$|lock$)/.#/g;'
 }
 
 git_is_working_tree_clean()
