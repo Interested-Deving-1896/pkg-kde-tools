@@ -62,12 +62,13 @@ install(DIRECTORY perllib/
 # Install debhelper helpers programs
 install(PROGRAMS
     dh_movelibkdeinit
+    dh_qmlcdeps
     dh_sameversiondep
     dh_sodeps
     DESTINATION ${BIN_INSTALL_DIR}
     COMPONENT Programs
 )
-install_pod_manpages(1 dh_movelibkdeinit dh_sameversiondep dh_sodeps)
+install_pod_manpages(1 dh_movelibkdeinit dh_qmlcdeps dh_sameversiondep dh_sodeps)
 
 # Install pkgkde binaries
 install(PROGRAMS

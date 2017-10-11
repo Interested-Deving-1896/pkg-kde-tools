@@ -1,5 +1,8 @@
 pkg-kde-tools (0.15.26) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Add a new script, dh_qmlcdeps, for generating proper Qt dependencies
+    for QML compiled data files (Closes: #872325).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 11 Oct 2017 13:24:10 +0300
 
