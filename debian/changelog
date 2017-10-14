@@ -4,6 +4,7 @@ pkg-kde-tools (0.15.26) UNRELEASED; urgency=medium
   * Add a new script, dh_qmlcdeps, for generating proper Qt dependencies
     for QML compiled data files (Closes: #872325).
   * Bump Standards-Version to 4.1.1, no changes needed.
+  * Fix syntax error in pkgkde-symbolshelper.1 manpage.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 11 Oct 2017 13:24:10 +0300
 
