@@ -1,3 +1,8 @@
+pkg-kde-tools (0.15.27) UNRELEASED; urgency=medium
+
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 17 Oct 2017 17:45:29 +0300
+
 pkg-kde-tools (0.15.26) unstable; urgency=medium
 
   * Add a new script, dh_qmlcdeps, for generating proper Qt dependencies
