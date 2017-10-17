@@ -1,5 +1,7 @@
 pkg-kde-tools (0.15.28) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Bump libdpkg-perl build-dependency too, to make the tests pass.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 17 Oct 2017 19:05:10 +0300
 
