@@ -30,11 +30,12 @@ use Debian::PkgKde::SymbolsHelper::Substs;
 
 # Use Debian::PkgKde::SymbolsHelper::Symbol as base symbol
 sub parse {
-    my ($self, $fh, $file, $seen, $obj_ref, $base_symbol) = @_;
-    unless (defined $base_symbol) {
-	$base_symbol = 'Debian::PkgKde::SymbolsHelper::Symbol';
+    my ($self, $fh, $file, %opts) = @_;
+    my $state = $opts{state} //= {};
+    unless (defined $state->{base_symbol}) {
+        $state->{base_symbol} = 'Debian::PkgKde::SymbolsHelper::Symbol';
     }
-    if (!defined $seen) {
+    unless (defined $state->{seen}) {
 	# Read 'SymbolsHelper-Confirmed' header
 	open(my $fh, "<", $file)
 	    or error("unable to open symbol file '$file' for reading");
@@ -46,7 +47,7 @@ sub parse {
 	    $self->set_confirmed(split(/\s+/, $1));
 	}
     }
-    return $self->SUPER::parse($fh, $file, $seen, $obj_ref, $base_symbol);
+    return $self->SUPER::parse($fh, $file, %opts);
 }
 
 sub set_confirmed {

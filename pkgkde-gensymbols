@@ -25,12 +25,12 @@ my $old_symbolfile_parse;
 
 sub new_symbolfile_parse {
     # Use Debian::PkgKde::SymbolsHelper::Symbol as base symbol
-    my ($self, $fh, $file, $seen, $obj_ref, $base_symbol) = @_;
-    unless (defined $base_symbol) {
-	$base_symbol = 'Debian::PkgKde::SymbolsHelper::Symbol';
+    my ($self, $fh, $file, %opts) = @_;
+    my $state = $opts{state} //= {};
+    unless (defined $state->{base_symbol}) {
+        $state->{base_symbol} = 'Debian::PkgKde::SymbolsHelper::Symbol';
     }
-    return &$old_symbolfile_parse($self, $fh, $file, $seen, $obj_ref,
-	$base_symbol);
+    return &$old_symbolfile_parse($self, $fh, $file, %opts);
 }
 
 sub check_dpkg_version {
