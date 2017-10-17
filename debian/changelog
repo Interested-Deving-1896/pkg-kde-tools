@@ -1,10 +1,9 @@
-pkg-kde-tools (0.15.28) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.28) unstable; urgency=medium
 
-  [ Dmitry Shachnev ]
   * Bump libdpkg-perl build-dependency too, to make the tests pass.
   * Adapt to SymbolFile API changes in libdpkg-perl 1.19.0 (Closes: #878892).
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 17 Oct 2017 19:05:10 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 17 Oct 2017 19:52:53 +0300
 
 pkg-kde-tools (0.15.27) unstable; urgency=medium
 
