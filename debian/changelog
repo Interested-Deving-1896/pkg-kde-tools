@@ -1,5 +1,8 @@
 pkg-kde-tools (0.15.27) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Adapt SymbolsHelper to debarch_to_cpuattrs() → debarch_to_abiattrs()
+    renaming in libdpkg-perl 1.19.0.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 17 Oct 2017 17:45:29 +0300
 

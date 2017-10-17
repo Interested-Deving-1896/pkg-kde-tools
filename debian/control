@@ -16,7 +16,7 @@ Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/pkg-kde-tools.git
 Package: pkg-kde-tools
 Architecture: all
 Multi-Arch: foreign
-Depends: libdpkg-perl (>= 1.15.6~),
+Depends: libdpkg-perl (>= 1.19.0~),
          python3:any (>= 3.3.2-2~),
          ${misc:Depends},
          ${perl:Depends}
