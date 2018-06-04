@@ -5,6 +5,7 @@ pkg-kde-tools (0.15.29) UNRELEASED; urgency=medium
 
   [ Simon Quigley ]
   * Bump Standards-version to 4.1.4, no changes needed.
+  * Run wrap-and-sort.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Jun 2018 21:45:42 -0500
 
