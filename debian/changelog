@@ -10,6 +10,10 @@ pkg-kde-tools (0.15.29) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Update Vcs fields for move to salsa.debian.org.
 
+  [ Andreas Ferber ]
+  * dh_qmlcdeps: don't exit on first package without qmlc files (Closes:
+    #905736).
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Jun 2018 21:45:42 -0500
 
 pkg-kde-tools (0.15.28) unstable; urgency=medium

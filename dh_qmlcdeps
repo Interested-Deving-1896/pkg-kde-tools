@@ -75,7 +75,7 @@ foreach my $package (@{$dh{DOPACKAGES}}) {
         }
     }, $tmpdir);
 
-    $qt_version_bin or exit(0);
+    $qt_version_bin or next;
     my @qt_version = unpack("C4", $qt_version_bin);
     my $qt_version_str = "$qt_version[2].$qt_version[1].$qt_version[0]";
     $qt_version[2] == 5 or error("Qt version $qt_version_str is not supported");
