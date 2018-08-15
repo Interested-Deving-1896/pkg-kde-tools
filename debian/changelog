@@ -1,7 +1,7 @@
 pkg-kde-tools (0.15.29) UNRELEASED; urgency=medium
 
   [ Kunal Mehta ]
-  * Replace broken alioth URLs in man pages.
+  * Replace broken alioth URLs in man pages (Closes: #905845).
 
   [ Simon Quigley ]
   * Bump Standards-version to 4.1.4, no changes needed.
