@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.29) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.29) unstable; urgency=medium
 
   [ Kunal Mehta ]
   * Replace broken alioth URLs in man pages (Closes: #905845).
@@ -14,7 +14,7 @@ pkg-kde-tools (0.15.29) UNRELEASED; urgency=medium
   * dh_qmlcdeps: don't exit on first package without qmlc files (Closes:
     #905736).
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Jun 2018 21:45:42 -0500
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 24 Mar 2019 13:19:34 +0300
 
 pkg-kde-tools (0.15.28) unstable; urgency=medium
 
