@@ -1,5 +1,9 @@
 pkg-kde-tools (0.15.30) UNRELEASED; urgency=medium
 
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Remove unconditional calls to dh_gconf (Closes: #931884). This is part of
+  dhmk, which is currently only used within KDE4 apps and it's being retired by
+  their maintainers.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 19 Aug 2019 10:36:26 -0300
 
