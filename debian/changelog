@@ -1,3 +1,9 @@
+pkg-kde-tools (0.15.31) UNRELEASED; urgency=medium
+
+  * 
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 31 Aug 2019 08:17:58 +0200
+
 pkg-kde-tools (0.15.30) unstable; urgency=medium
 
   * Remove unconditional calls to dh_gconf (Closes: #931884). This is part of
