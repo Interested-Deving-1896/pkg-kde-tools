@@ -1,6 +1,8 @@
 pkg-kde-tools (0.15.31) UNRELEASED; urgency=medium
 
-  * 
+  [ Sandro Knauß ]
+  * 3/library-packages.mk: Specifiy Regex more precisly to not split
+    package with - in their name.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 31 Aug 2019 08:17:58 +0200
 
