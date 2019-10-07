@@ -2,6 +2,8 @@ pkg-kde-tools (0.15.31) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
   * pkgkde-vcs: Add buster to supported distributions.
+  * 3/library-packages.mk: Specifiy Regex more precisly to not split
+    package with - in their name.
 
   [ Dmitry Shachnev ]
   * Also add bullseye and bookworm to supported distributions.
