@@ -1,4 +1,6 @@
-pkg-kde-tools (0.15.31) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.31) unstable; urgency=medium
+
+  * Team upload.
 
   [ Sandro Knauß ]
   * pkgkde-vcs: Add buster to supported distributions.
@@ -12,7 +14,7 @@ pkg-kde-tools (0.15.31) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Also add bullseye and bookworm to supported distributions.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 31 Aug 2019 08:17:58 +0200
+ -- Sandro Knauß <hefee@debian.org>  Sun, 13 Oct 2019 09:44:05 +0200
 
 pkg-kde-tools (0.15.30) unstable; urgency=medium
 
