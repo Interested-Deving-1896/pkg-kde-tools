@@ -6,6 +6,8 @@ pkg-kde-tools (0.15.31) UNRELEASED; urgency=medium
     package with - in their name.
   * Bump Standards-Version to 4.4.1 (no changes needed).
   * Bump to compat 12 and use new style without d/compat.
+  * move dh_install --list-missing (dh_missing --list-install is default
+    with compat v12).
 
   [ Dmitry Shachnev ]
   * Also add bullseye and bookworm to supported distributions.
