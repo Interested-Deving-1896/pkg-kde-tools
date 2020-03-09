@@ -2,6 +2,8 @@ pkg-kde-tools (0.15.32) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Minor markup fix in pkgkde-symbolshelper manpage.
+  * Make dh_qmlcdeps generate dependencies with tilde, to support pre-release
+    Qt versions.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 18 Feb 2020 14:49:04 +0300
 

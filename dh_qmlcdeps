@@ -81,8 +81,8 @@ foreach my $package (@{$dh{DOPACKAGES}}) {
     $qt_version[2] == 5 or error("Qt version $qt_version_str is not supported");
     my $qt_next_version_str = "$qt_version[2].$qt_version[1]." . ($qt_version[0] + 1);
 
-    addsubstvar($package, "qmlc:Depends", "libqt5qml5 (>= $qt_version_str)");
-    addsubstvar($package, "qmlc:Depends", "libqt5qml5 (<< $qt_next_version_str)");
+    addsubstvar($package, "qmlc:Depends", "libqt5qml5 (>= $qt_version_str~)");
+    addsubstvar($package, "qmlc:Depends", "libqt5qml5 (<< $qt_next_version_str~)");
 }
 
 =head1 SEE ALSO
