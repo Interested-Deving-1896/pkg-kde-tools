@@ -5,7 +5,11 @@ pkg-kde-tools (0.15.32) UNRELEASED; urgency=medium
   * Make dh_qmlcdeps generate dependencies with tilde, to support pre-release
     Qt versions.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 18 Feb 2020 14:49:04 +0300
+  [ Scott Kitterman ]
+  * Replace Dpkg::version with Dpkg::VERSION in pkgkde-symbolshelper to
+    support use with dpkg >= 1.20.0 (Closes: #953960).
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 14 Mar 2020 22:18:31 -0400
 
 pkg-kde-tools (0.15.31) unstable; urgency=medium
 

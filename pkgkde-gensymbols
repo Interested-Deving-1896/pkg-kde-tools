@@ -35,7 +35,7 @@ sub new_symbolfile_parse {
 
 sub check_dpkg_version {
     my @need = @_;
-    my @ver = split(/[.]/, $Dpkg::version);
+    my @ver = split(/[.]/, $Dpkg::VERSION);
     my $ok = 0;
     for (my $i = 0; ! $ok && $i < @need && $i < @ver; $i++) {
 	if ($ver[$i] > $need[$i]) {
