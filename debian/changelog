@@ -1,4 +1,4 @@
-pkg-kde-tools (0.15.32) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.32) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
   * Minor markup fix in pkgkde-symbolshelper manpage.
@@ -10,7 +10,7 @@ pkg-kde-tools (0.15.32) UNRELEASED; urgency=medium
   * Replace Dpkg::version with Dpkg::VERSION in pkgkde-symbolshelper to
     support use with dpkg >= 1.20.0 (Closes: #953960).
 
- -- Scott Kitterman <scott@kitterman.com>  Sat, 14 Mar 2020 22:18:31 -0400
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 19 Mar 2020 21:57:14 +0300
 
 pkg-kde-tools (0.15.31) unstable; urgency=medium
 
