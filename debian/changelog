@@ -4,6 +4,7 @@ pkg-kde-tools (0.15.32) UNRELEASED; urgency=medium
   * Minor markup fix in pkgkde-symbolshelper manpage.
   * Make dh_qmlcdeps generate dependencies with tilde, to support pre-release
     Qt versions.
+  * Bump Standards-Version to 4.5.0, no changes needed.
 
   [ Scott Kitterman ]
   * Replace Dpkg::version with Dpkg::VERSION in pkgkde-symbolshelper to
