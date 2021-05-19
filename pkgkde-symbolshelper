@@ -506,7 +506,7 @@ sub subcommand_create {
 		    $symfiles{$symfile->get_arch()} = $symfile;
 		}
 	    } else {
-		error("unreadale file/directory: %s", $f);
+		error("unreadable file/directory: %s", $f);
 	    }
 	}
 
