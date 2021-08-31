@@ -43,7 +43,7 @@ def process_symbols_file(symbols_file_path, write_results=False):
             line = line.rstrip()
             if line.endswith(' 1'):
                 line = line[:-2]
-            if '@Qt_5_PRIVATE_API' in line:
+            if '@Qt_5_PRIVATE_API' in line or '@Qt_6_PRIVATE_API' in line:
                 line += ' 1'
             if line.startswith('| '):
                 has_alternative = True
