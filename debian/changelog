@@ -6,6 +6,9 @@ pkg-kde-tools (0.15.33) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Add Qt 6 support to pkgkde-mark-qt5-private-symbols.
 
+  [ Debian Janitor ]
+  * Add missing ${misc:Depends} to Depends for libdlrestrictions-dev.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 19 May 2021 20:00:15 +0900
 
 pkg-kde-tools (0.15.32) unstable; urgency=medium

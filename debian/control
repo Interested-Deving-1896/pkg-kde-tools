@@ -80,7 +80,7 @@ Description: library that implements library compatibility checks for dlopen()
 Package: libdlrestrictions-dev
 Architecture: any
 Section: libdevel
-Depends: libdlrestrictions1 (= ${binary:Version})
+Depends: libdlrestrictions1 (= ${binary:Version}), ${misc:Depends}
 Description: development files for the DLRestrictions library
  This package provides development files needed to build both shared libraries,
  which specify their compatibility restrictions, and applications, which check
