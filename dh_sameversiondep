@@ -131,7 +131,7 @@ Assume we have the following in F<debian/control>:
     Package: libab-dev
     Depends: ${sameVersionDep:libc-dev}, ${sameVersionDep:libd-dev:libb}
 
-Assumming that libc and libc-dev (both from the same source), as well as libd
+Assuming that libc and libc-dev (both from the same source), as well as libd
 and libd-dev (both from the same source) are installed, the value of
 C<sameVersionDep:libc-dev> will be I<< libc-dev (>= 0.1) >> and the value of
 C<sameVersionDep:libd-dev:libb> will be I<< libd-dev (>= 0.2) >>.
