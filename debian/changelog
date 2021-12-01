@@ -5,6 +5,7 @@ pkg-kde-tools (0.15.33) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Add Qt 6 support to pkgkde-mark-qt5-private-symbols.
+  * Remove old and unused pkgkde-mark-private-symbols tool.
 
   [ Debian Janitor ]
   * Add missing ${misc:Depends} to Depends for libdlrestrictions-dev.
