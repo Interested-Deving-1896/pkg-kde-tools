@@ -1,11 +1,11 @@
-pkg-kde-tools (0.15.34) UNRELEASED; urgency=medium
+pkg-kde-tools (0.15.34) unstable; urgency=medium
 
   * Team upload.
 
   [ Patrick Franz ]
   * Add copyright-script for Qt.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 18 Dec 2021 14:11:49 +0100
+ -- Patrick Franz <deltaone@debian.org>  Sat, 18 Dec 2021 14:18:53 +0100
 
 pkg-kde-tools (0.15.33) unstable; urgency=medium
 
