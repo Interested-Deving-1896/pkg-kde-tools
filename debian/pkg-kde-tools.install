@@ -10,6 +10,7 @@ usr/bin/pkgkde-mark-qt5-private-symbols
 usr/bin/pkgkde-override-sc-dev-latest
 usr/bin/pkgkde-symbolshelper
 usr/bin/pkgkde-vcs
+usr/bin/pkgkde-update-qt-copyright
 usr/share/man/man1/dh_movelibkdeinit.1
 usr/share/man/man1/dh_qmlcdeps.1
 usr/share/man/man1/dh_sameversiondep.1

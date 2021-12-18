@@ -80,6 +80,7 @@ install(PROGRAMS
     pkgkde-symbolshelper
     pkgkde-vcs
     pkgkde-git
+    pkgkde-update-qt-copyright
     DESTINATION ${BIN_INSTALL_DIR}
     COMPONENT Programs)
 install_pod_manpages(1 pkgkde-override-sc-dev-latest)
