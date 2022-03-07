@@ -1,15 +1,13 @@
-pkg-kde-tools (0.15.35) UNRELEASED; urgency=medium
-
-  [ Debian Qt/KDE Maintainers ]
-  * Add dh-sequence-* virtual packages to be able to use those virtual
-    packages as dependency and not explicitly use with in d/rules.
+pkg-kde-tools (0.15.35) unstable; urgency=medium
 
   [ Sandro Knauß ]
+  * Add dh-sequence-* virtual packages to be able to use those virtual
+    packages as dependency and not explicitly use with in d/rules.
   * Add Build-Depends-Package for libdlrestrictions1.
   * Add hardening=+all.
   * Add Rules-Requires-Root.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 07 Mar 2022 12:00:34 +0100
+ -- Sandro Knauß <hefee@debian.org>  Mon, 07 Mar 2022 12:25:24 +0100
 
 pkg-kde-tools (0.15.34) unstable; urgency=medium
 
