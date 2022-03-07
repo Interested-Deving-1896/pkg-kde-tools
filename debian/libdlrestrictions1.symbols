@@ -1,4 +1,5 @@
 libdlrestrictions.so.1 libdlrestrictions1 #MINVER#
+* Build-Depends-Package: libdlrestrictions-dev
  dlr_check_file_compatibility@libdlrestrictions.so.1 0.14
  dlr_dlopen_extended@libdlrestrictions.so.1 0.14
  dlr_error@libdlrestrictions.so.1 0.14
