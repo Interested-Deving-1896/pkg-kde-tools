@@ -6,6 +6,7 @@ pkg-kde-tools (0.15.35) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
   * Add Build-Depends-Package for libdlrestrictions1.
+  * Add hardening=+all.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 07 Mar 2022 12:00:34 +0100
 
