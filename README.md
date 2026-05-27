@@ -91,11 +91,11 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 [@netrunner-sync-service](https://github.com/netrunner-sync-service) (18 commits)  
 [@hefee](https://github.com/hefee) (15 commits)  
 [@jmsantamaria](https://github.com/jmsantamaria) (9 commits)  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (6 commits)  
 [@OdyX](https://github.com/OdyX) (4 commits)  
 [@tsimonq2](https://github.com/tsimonq2) (4 commits)  
 [@svuorela](https://github.com/svuorela) (4 commits)  
 [@debian-janitor](https://github.com/debian-janitor) (3 commits)  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (3 commits)  
 [@delta-one](https://github.com/delta-one) (3 commits)  
 [@ana](https://github.com/ana) (2 commits)  
 [@detrout](https://github.com/detrout) (2 commits)  
@@ -106,7 +106,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 [@legoktm](https://github.com/legoktm) (1 commit)  
 [@shadeslayer](https://github.com/shadeslayer) (1 commit)  
 
-*Note: This repository is a mirror. Please refer to the upstream source for additional contributions and updates.*
+This repository may be a mirror. Please check the upstream source for additional context.
 <!-- AI:end:contributors -->
 
 ## Origins
