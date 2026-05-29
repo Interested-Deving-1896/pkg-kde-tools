@@ -4,7 +4,7 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and scripts to assist in packaging KDE software, primarily for Debian-based distributions. It addresses tasks such as managing build dependencies, generating symbol files, and handling KDE-specific packaging requirements. It is used by developers and maintainers working on KDE software packaging workflows.
+This project provides a set of tools and utilities to assist with packaging KDE software, primarily for use in Debian-based distributions. It includes scripts and configurations for handling tasks such as generating symbols files, managing build logs, and working with Qt and KDE-specific packaging requirements. It is intended for developers and maintainers involved in packaging KDE applications.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
@@ -58,13 +58,21 @@ cd pkg-kde-tools
 ## CI
 
 <!-- AI:start:ci -->
-- **build.yml**: Runs on `push` and `pull_request` events. Builds the project using CMake and verifies Perl dependencies. No secrets required.
+The repository uses GitHub Actions for continuous integration. The following workflows are defined:
 
-- **test.yml**: Executes unit tests for the project on `push` and `pull_request` events. Respects the `DISABLE_TESTS` CMake option. No secrets required.
+1. **build.yml**:  
+   - Runs the build process using CMake and ensures dependencies like Perl and `pod2man` are available.  
+   - No secrets required.
 
-- **release.yml**: Triggers on `release` creation. Builds the project and packages artifacts for distribution. Requires the `GH_TOKEN` secret for publishing release assets.
+2. **test.yml**:  
+   - Executes unit tests unless explicitly disabled via the `DISABLE_TESTS` option in the CMake configuration.  
+   - No secrets required.
 
-- **lint.yml**: Runs static analysis and linting checks on Perl scripts and CMake files. Triggers on `push` and `pull_request` events. No secrets required.
+3. **lint.yml**:  
+   - Checks code formatting and style compliance for Perl scripts and other files.  
+   - No secrets required.
+
+All workflows are triggered on `push` and `pull_request` events targeting the default branch.
 <!-- AI:end:ci -->
 
 ## Mirror chain
