@@ -4,47 +4,35 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and utilities to assist in packaging KDE software for Debian-based distributions. It addresses tasks such as generating symbol files, managing dependencies, and handling build logs, streamlining the packaging process for maintainers and developers working with KDE applications. It is primarily used by developers and maintainers of KDE packages in environments like Debian and KDE Neon.
+This project provides a set of tools and utilities for building and maintaining KDE packages, primarily for use in Debian-based systems. It addresses tasks such as generating and managing symbol files, handling Qt-specific packaging requirements, and automating common packaging workflows. It is used by developers and maintainers working on KDE-related software packaging.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project consists of several components designed to facilitate the packaging and maintenance of KDE software. It is primarily implemented in Perl and uses CMake for build configuration. The key components include:
+The project is structured to support KDE packaging tools, primarily written in Perl, with build and installation managed via CMake. Key components include:
 
-- **Perl Scripts**: Located in the repository root, these scripts handle tasks like generating symbols files, managing dependencies, and updating copyright information.
-- **CMake Configuration**: The `CMakeLists.txt` file defines build options, dependencies (e.g., Perl and `pod2man`), and installation paths for binaries, libraries, and documentation.
-- **Data and Templates**: The `cmake`, `makefiles`, and `qt-kde-team` directories contain reusable data and templates for KDE packaging workflows.
-- **Manual Pages**: Generated from POD files using the `install_pod_manpages` function in the CMake configuration.
+- **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl libraries, `pod2man` for manual page generation, and installation directories for binaries, libraries, and documentation.
+- **Perl Scripts**: Located at the root, these scripts provide various utilities for KDE packaging, such as `pkgkde-gensymbols` and `pkgkde-update-qt-copyright`.
+- **Support Files**: The `cmake`, `makefiles`, and `qt-kde-team` directories contain reusable configurations and templates for KDE-related builds.
+- **Manual Pages**: Generated from POD files using the `install_pod_manpages` CMake function and installed to the appropriate `man` directories.
+- **Debian Packaging**: The `debian` directory includes metadata and scripts for building Debian packages.
 
-The directory structure is as follows:
-
+Directory structure:
 ```plaintext
 .
-├── CMakeLists.txt
-├── README.md
 ├── cmake/
 ├── datalib/
 ├── debian/
 ├── makefiles/
+├── qt-kde-team/
 ├── man1/
 ├── perllib/
-├── qt-kde-team/
-├── dh_movelibkdeinit
-├── dh_qmlcdeps
-├── dh_sameversiondep
-├── dh_sodeps
+├── CMakeLists.txt
+├── README.md
 ├── perl-profiler.pl
-├── pkgkde-debs2symbols
-├── pkgkde-gensymbols
-├── pkgkde-getbuildlogs
-├── pkgkde-git
-├── pkgkde-mark-qt5-private-symbols
-├── pkgkde-override-sc-dev-latest
-├── pkgkde-symbolshelper
-├── pkgkde-update-qt-copyright
-├── pkgkde-vcs
-└── run-local
+├── pkgkde-*.pl
+└── COPYING.* (licenses)
 ```
 <!-- AI:end:architecture -->
 
