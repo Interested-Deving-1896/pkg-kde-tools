@@ -55,13 +55,27 @@ cd pkg-kde-tools
 ## CI
 
 <!-- AI:start:ci -->
-- **build.yml**: Runs on `push` and `pull_request` events. Builds the project using CMake and verifies Perl dependencies. No secrets required.
+The repository uses GitHub Actions for continuous integration. The following workflows are defined:
 
-- **test.yml**: Executes unit tests for Perl scripts and CMake configurations. Runs on `push` and `pull_request` events. No secrets required.
+1. **`build.yml`**  
+   - Verifies the build process using CMake.  
+   - Runs on `ubuntu-latest`.  
+   - Requires no secrets.
 
-- **release.yml**: Creates a release package when a tag is pushed. Includes building, packaging, and uploading artifacts. Requires the `GITHUB_TOKEN` secret for authentication.
+2. **`test.yml`**  
+   - Executes unit tests if enabled (`DISABLE_TESTS` is off).  
+   - Runs on `ubuntu-latest`.  
+   - Requires no secrets.
 
-- **lint.yml**: Checks code style for Perl scripts and CMake files. Runs on `push` and `pull_request` events. No secrets required.
+3. **`lint.yml`**  
+   - Checks code style and formatting for Perl scripts and CMake files.  
+   - Runs on `ubuntu-latest`.  
+   - Requires no secrets.
+
+4. **`release.yml`**  
+   - Builds and packages the project for release.  
+   - Triggers on `push` to `main` or version tags.  
+   - Requires the `GITHUB_TOKEN` secret (automatically provided).
 <!-- AI:end:ci -->
 
 ## Mirror chain
