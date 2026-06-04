@@ -3,36 +3,40 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and utilities for building and maintaining KDE packages, primarily for use in Debian-based systems. It addresses tasks such as generating and managing symbol files, handling Qt-specific packaging requirements, and automating common packaging workflows. It is used by developers and maintainers working on KDE-related software packaging.
+This project provides tools and utilities to assist in packaging KDE software, primarily for Debian-based distributions. It addresses the complexities of managing build processes, dependencies, and metadata for KDE applications. It is used by developers and maintainers working on KDE-related packages to streamline and standardize their workflows.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project is structured to support KDE packaging tools, primarily written in Perl, with build and installation managed via CMake. Key components include:
+The project is structured as a set of tools and scripts for managing KDE packages, primarily written in Perl. It uses CMake for build configuration and includes functionality for generating manual pages from POD files, installing scripts, libraries, and data files, and managing dependencies. The repository is organized into directories and files as follows:
 
-- **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl libraries, `pod2man` for manual page generation, and installation directories for binaries, libraries, and documentation.
-- **Perl Scripts**: Located at the root, these scripts provide various utilities for KDE packaging, such as `pkgkde-gensymbols` and `pkgkde-update-qt-copyright`.
-- **Support Files**: The `cmake`, `makefiles`, and `qt-kde-team` directories contain reusable configurations and templates for KDE-related builds.
-- **Manual Pages**: Generated from POD files using the `install_pod_manpages` CMake function and installed to the appropriate `man` directories.
-- **Debian Packaging**: The `debian` directory includes metadata and scripts for building Debian packages.
-
-Directory structure:
 ```plaintext
 .
-├── cmake/
-├── datalib/
-├── debian/
-├── makefiles/
-├── qt-kde-team/
-├── man1/
-├── perllib/
-├── CMakeLists.txt
-├── README.md
-├── perl-profiler.pl
-├── pkgkde-*.pl
-└── COPYING.* (licenses)
+├── CMakeLists.txt         # CMake build configuration
+├── README.md              # Project documentation
+├── cmake/                 # CMake helper modules
+├── datalib/               # Architecture-independent library bundles
+├── debian/                # Debian packaging files
+├── makefiles/             # Makefile templates
+├── man1/                  # Manual pages
+├── perllib/               # Perl library modules
+├── qt-kde-team/           # KDE-specific packaging tools
+├── dh_movelibkdeinit      # Perl script for KDE library management
+├── dh_qmlcdeps            # Perl script for QML dependency handling
+├── dh_sameversiondep      # Perl script for version dependency checks
+├── dh_sodeps              # Perl script for shared object dependencies
+├── perl-profiler.pl       # Perl profiler script
+├── pkgkde-*               # Various KDE packaging tools
+└── COPYING.*              # License files
 ```
+
+Key components include:
+- **CMake Configuration**: Ensures required dependencies like Perl and `pod2man` are available and defines installation paths.
+- **Perl Scripts**: Located in the root directory, these scripts handle tasks such as dependency management, symbol generation, and version checks.
+- **Helper Directories**: `cmake`, `makefiles`, and `qt-kde-team` provide reusable configurations and templates for KDE packaging.
+- **Manual Pages**: Generated from POD files and installed into the `man1` directory.
+- **Libraries and Data**: Installed into architecture-independent directories like `datalib` and `perllib`.
 <!-- AI:end:architecture -->
 
 ## Install
