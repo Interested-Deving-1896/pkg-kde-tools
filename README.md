@@ -3,40 +3,34 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides tools and utilities to assist in packaging KDE software, primarily for Debian-based distributions. It addresses the complexities of managing build processes, dependencies, and metadata for KDE applications. It is used by developers and maintainers working on KDE-related packages to streamline and standardize their workflows.
+This project provides tools and utilities to assist with packaging KDE software, primarily for use in Debian-based distributions. It addresses tasks such as generating and managing symbol files, handling Qt-specific packaging needs, and automating common packaging workflows. It is used by developers and maintainers working on KDE-related packages to streamline and standardize their packaging processes.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project is structured as a set of tools and scripts for managing KDE packages, primarily written in Perl. It uses CMake for build configuration and includes functionality for generating manual pages from POD files, installing scripts, libraries, and data files, and managing dependencies. The repository is organized into directories and files as follows:
+The project consists of tools and scripts for managing KDE-related packaging tasks. It is primarily implemented in Perl and uses CMake for build configuration. The architecture includes the following components:
 
+1. **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl libraries, `pod2man` for manual page generation, and installation directories for binaries, libraries, and documentation.
+2. **Perl Scripts**: Located at the root directory, these scripts handle various packaging tasks such as generating symbols, managing dependencies, and updating copyright information.
+3. **Data and Templates**: The `cmake`, `makefiles`, and `qt-kde-team` directories contain reusable templates and configuration files for KDE packaging.
+4. **Manual Pages**: Generated from POD files using the `install_pod_manpages` CMake function and installed into the `share/man` directory.
+
+Directory structure:
 ```plaintext
 .
-├── CMakeLists.txt         # CMake build configuration
-├── README.md              # Project documentation
-├── cmake/                 # CMake helper modules
-├── datalib/               # Architecture-independent library bundles
-├── debian/                # Debian packaging files
-├── makefiles/             # Makefile templates
-├── man1/                  # Manual pages
-├── perllib/               # Perl library modules
-├── qt-kde-team/           # KDE-specific packaging tools
-├── dh_movelibkdeinit      # Perl script for KDE library management
-├── dh_qmlcdeps            # Perl script for QML dependency handling
-├── dh_sameversiondep      # Perl script for version dependency checks
-├── dh_sodeps              # Perl script for shared object dependencies
-├── perl-profiler.pl       # Perl profiler script
-├── pkgkde-*               # Various KDE packaging tools
-└── COPYING.*              # License files
+├── CMakeLists.txt
+├── cmake/
+├── datalib/
+├── debian/
+├── makefiles/
+├── man1/
+├── perllib/
+├── qt-kde-team/
+├── scripts (e.g., pkgkde-gensymbols, pkgkde-update-qt-copyright)
+└── README.md
 ```
-
-Key components include:
-- **CMake Configuration**: Ensures required dependencies like Perl and `pod2man` are available and defines installation paths.
-- **Perl Scripts**: Located in the root directory, these scripts handle tasks such as dependency management, symbol generation, and version checks.
-- **Helper Directories**: `cmake`, `makefiles`, and `qt-kde-team` provide reusable configurations and templates for KDE packaging.
-- **Manual Pages**: Generated from POD files and installed into the `man1` directory.
-- **Libraries and Data**: Installed into architecture-independent directories like `datalib` and `perllib`.
+Components interact via CMake configuration, with Perl scripts leveraging shared libraries and templates for KDE packaging workflows.
 <!-- AI:end:architecture -->
 
 ## Install
@@ -61,25 +55,23 @@ cd pkg-kde-tools
 <!-- AI:start:ci -->
 The repository uses GitHub Actions for continuous integration. The following workflows are defined:
 
-1. **`build.yml`**  
-   - Verifies the build process using CMake.  
-   - Runs on `ubuntu-latest`.  
-   - Requires no secrets.
+1. **`build.yml`**:  
+   - Validates the build process using CMake.  
+   - Ensures required Perl dependencies (`PERL_VENDORLIB` and `PERL_EXECUTABLE`) and `pod2man` are available.  
+   - Runs on `push` and `pull_request` events.  
+   - No secrets required.
 
-2. **`test.yml`**  
-   - Executes unit tests if enabled (`DISABLE_TESTS` is off).  
-   - Runs on `ubuntu-latest`.  
-   - Requires no secrets.
+2. **`test.yml`**:  
+   - Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in `CMakeLists.txt`.  
+   - Runs on `push` and `pull_request` events.  
+   - No secrets required.
 
-3. **`lint.yml`**  
-   - Checks code style and formatting for Perl scripts and CMake files.  
-   - Runs on `ubuntu-latest`.  
-   - Requires no secrets.
+3. **`lint.yml`**:  
+   - Checks the repository for coding style and syntax issues in Perl scripts and CMake files.  
+   - Runs on `push` and `pull_request` events.  
+   - No secrets required.
 
-4. **`release.yml`**  
-   - Builds and packages the project for release.  
-   - Triggers on `push` to `main` or version tags.  
-   - Requires the `GITHUB_TOKEN` secret (automatically provided).
+All workflows are defined in `.github/workflows/`.
 <!-- AI:end:ci -->
 
 ## Mirror chain
@@ -99,35 +91,35 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) (464 commits)
-[@mitya57](https://github.com/mitya57) (61 commits)
-[@perezmeyer](https://github.com/perezmeyer) (26 commits)
-[@maxyz](https://github.com/maxyz) (23 commits)
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) (18 commits)
-[@hefee](https://github.com/hefee) (15 commits)
-[@jmsantamaria](https://github.com/jmsantamaria) (9 commits)
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (6 commits)
-[@OdyX](https://github.com/OdyX) (4 commits)
-[@tsimonq2](https://github.com/tsimonq2) (4 commits)
-[@svuorela](https://github.com/svuorela) (4 commits)
-[@debian-janitor](https://github.com/debian-janitor) (3 commits)
-[@delta-one](https://github.com/delta-one) (3 commits)
-[@ana](https://github.com/ana) (2 commits)
-[@detrout](https://github.com/detrout) (2 commits)
-[@norbusan](https://github.com/norbusan) (2 commits)
-[@aburch](https://github.com/aburch) (1 commit)
-[@helmutg](https://github.com/helmutg) (1 commit)
-[@jriddell](https://github.com/jriddell) (1 commit)
-[@legoktm](https://github.com/legoktm) (1 commit)
-[@shadeslayer](https://github.com/shadeslayer) (1 commit)
+[@modax](https://github.com/modax) - 464 commits  
+[@mitya57](https://github.com/mitya57) - 61 commits  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 53 commits  
+[@perezmeyer](https://github.com/perezmeyer) - 26 commits  
+[@maxyz](https://github.com/maxyz) - 23 commits  
+[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits  
+[@hefee](https://github.com/hefee) - 15 commits  
+[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits  
+[@svuorela](https://github.com/svuorela) - 4 commits  
+[@tsimonq2](https://github.com/tsimonq2) - 4 commits  
+[@OdyX](https://github.com/OdyX) - 4 commits  
+[@debian-janitor](https://github.com/debian-janitor) - 3 commits  
+[@delta-one](https://github.com/delta-one) - 3 commits  
+[@ana](https://github.com/ana) - 2 commits  
+[@detrout](https://github.com/detrout) - 2 commits  
+[@norbusan](https://github.com/norbusan) - 2 commits  
+[@aburch](https://github.com/aburch) - 1 commit  
+[@helmutg](https://github.com/helmutg) - 1 commit  
+[@jriddell](https://github.com/jriddell) - 1 commit  
+[@legoktm](https://github.com/legoktm) - 1 commit  
+[@shadeslayer](https://github.com/shadeslayer) - 1 commit  
 
-This repository may be a mirror. Please check the upstream source for additional context.
+Note: This repository may be a mirror. Please refer to the upstream source for additional context.
 <!-- AI:end:contributors -->
 
 ## Origins
 
 <!-- AI:start:origins -->
-_Original project — no upstream fork._
+_No dependency graph found. Run `generate-dep-graph.yml` to generate `dep-graph/origins.md`._
 <!-- AI:end:origins -->
 
 ## Resources
