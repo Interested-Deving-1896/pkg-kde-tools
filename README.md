@@ -53,25 +53,24 @@ cd pkg-kde-tools
 ## CI
 
 <!-- AI:start:ci -->
-The repository uses GitHub Actions for continuous integration. The following workflows are defined:
+The repository includes the following GitHub Actions workflows:
 
-1. **`build.yml`**:  
-   - Validates the build process using CMake.  
-   - Ensures required Perl dependencies (`PERL_VENDORLIB` and `PERL_EXECUTABLE`) and `pod2man` are available.  
-   - Runs on `push` and `pull_request` events.  
-   - No secrets required.
+1. **`build.yml`**  
+   - **Purpose**: Validates the build process using CMake and ensures required dependencies (e.g., Perl, `pod2man`) are available.  
+   - **Triggers**: Runs on `push` and `pull_request` events.  
+   - **Secrets**: None required.  
 
-2. **`test.yml`**:  
-   - Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in `CMakeLists.txt`.  
-   - Runs on `push` and `pull_request` events.  
-   - No secrets required.
+2. **`test.yml`**  
+   - **Purpose**: Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in the CMake configuration.  
+   - **Triggers**: Runs on `push` and `pull_request` events.  
+   - **Secrets**: None required.  
 
-3. **`lint.yml`**:  
-   - Checks the repository for coding style and syntax issues in Perl scripts and CMake files.  
-   - Runs on `push` and `pull_request` events.  
-   - No secrets required.
+3. **`lint.yml`**  
+   - **Purpose**: Performs linting on Perl scripts and CMake files to ensure code quality.  
+   - **Triggers**: Runs on `push` and `pull_request` events.  
+   - **Secrets**: None required.  
 
-All workflows are defined in `.github/workflows/`.
+Ensure that the repository contains a valid `.perlcriticrc` file for Perl linting, and that all required dependencies for CMake and Perl are installed in the CI environment.
 <!-- AI:end:ci -->
 
 ## Mirror chain
@@ -91,29 +90,29 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) - 464 commits  
-[@mitya57](https://github.com/mitya57) - 61 commits  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 53 commits  
-[@perezmeyer](https://github.com/perezmeyer) - 26 commits  
-[@maxyz](https://github.com/maxyz) - 23 commits  
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits  
-[@hefee](https://github.com/hefee) - 15 commits  
-[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits  
-[@svuorela](https://github.com/svuorela) - 4 commits  
-[@tsimonq2](https://github.com/tsimonq2) - 4 commits  
-[@OdyX](https://github.com/OdyX) - 4 commits  
-[@debian-janitor](https://github.com/debian-janitor) - 3 commits  
-[@delta-one](https://github.com/delta-one) - 3 commits  
-[@ana](https://github.com/ana) - 2 commits  
-[@detrout](https://github.com/detrout) - 2 commits  
-[@norbusan](https://github.com/norbusan) - 2 commits  
-[@aburch](https://github.com/aburch) - 1 commit  
-[@helmutg](https://github.com/helmutg) - 1 commit  
-[@jriddell](https://github.com/jriddell) - 1 commit  
-[@legoktm](https://github.com/legoktm) - 1 commit  
-[@shadeslayer](https://github.com/shadeslayer) - 1 commit  
+[@modax](https://github.com/modax) (464 commits)  
+[@mitya57](https://github.com/mitya57) (61 commits)  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (57 commits)  
+[@perezmeyer](https://github.com/perezmeyer) (26 commits)  
+[@maxyz](https://github.com/maxyz) (23 commits)  
+[@netrunner-sync-service](https://github.com/netrunner-sync-service) (18 commits)  
+[@hefee](https://github.com/hefee) (15 commits)  
+[@jmsantamaria](https://github.com/jmsantamaria) (9 commits)  
+[@svuorela](https://github.com/svuorela) (4 commits)  
+[@tsimonq2](https://github.com/tsimonq2) (4 commits)  
+[@OdyX](https://github.com/OdyX) (4 commits)  
+[@debian-janitor](https://github.com/debian-janitor) (3 commits)  
+[@delta-one](https://github.com/delta-one) (3 commits)  
+[@ana](https://github.com/ana) (2 commits)  
+[@detrout](https://github.com/detrout) (2 commits)  
+[@norbusan](https://github.com/norbusan) (2 commits)  
+[@aburch](https://github.com/aburch) (1 commit)  
+[@helmutg](https://github.com/helmutg) (1 commit)  
+[@jriddell](https://github.com/jriddell) (1 commit)  
+[@legoktm](https://github.com/legoktm) (1 commit)  
+[@shadeslayer](https://github.com/shadeslayer) (1 commit)  
 
-Note: This repository may be a mirror. Please refer to the upstream source for additional context.
+*Note: This repository is a mirror. Please refer to the upstream source for additional contributions.*
 <!-- AI:end:contributors -->
 
 ## Origins
