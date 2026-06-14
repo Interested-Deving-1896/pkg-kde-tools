@@ -91,29 +91,29 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) (464 commits)  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (64 commits)  
-[@mitya57](https://github.com/mitya57) (61 commits)  
-[@perezmeyer](https://github.com/perezmeyer) (26 commits)  
-[@maxyz](https://github.com/maxyz) (23 commits)  
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) (18 commits)  
-[@hefee](https://github.com/hefee) (15 commits)  
-[@jmsantamaria](https://github.com/jmsantamaria) (9 commits)  
-[@OdyX](https://github.com/OdyX) (4 commits)  
-[@tsimonq2](https://github.com/tsimonq2) (4 commits)  
-[@svuorela](https://github.com/svuorela) (4 commits)  
-[@debian-janitor](https://github.com/debian-janitor) (3 commits)  
-[@delta-one](https://github.com/delta-one) (3 commits)  
-[@ana](https://github.com/ana) (2 commits)  
-[@detrout](https://github.com/detrout) (2 commits)  
-[@norbusan](https://github.com/norbusan) (2 commits)  
-[@aburch](https://github.com/aburch) (1 commit)  
-[@helmutg](https://github.com/helmutg) (1 commit)  
-[@jriddell](https://github.com/jriddell) (1 commit)  
-[@legoktm](https://github.com/legoktm) (1 commit)  
-[@shadeslayer](https://github.com/shadeslayer) (1 commit)  
+[@modax](https://github.com/modax) - 464 commits  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 71 commits  
+[@mitya57](https://github.com/mitya57) - 61 commits  
+[@perezmeyer](https://github.com/perezmeyer) - 26 commits  
+[@maxyz](https://github.com/maxyz) - 23 commits  
+[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits  
+[@hefee](https://github.com/hefee) - 15 commits  
+[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits  
+[@OdyX](https://github.com/OdyX) - 4 commits  
+[@tsimonq2](https://github.com/tsimonq2) - 4 commits  
+[@svuorela](https://github.com/svuorela) - 4 commits  
+[@debian-janitor](https://github.com/debian-janitor) - 3 commits  
+[@delta-one](https://github.com/delta-one) - 3 commits  
+[@ana](https://github.com/ana) - 2 commits  
+[@detrout](https://github.com/detrout) - 2 commits  
+[@norbusan](https://github.com/norbusan) - 2 commits  
+[@aburch](https://github.com/aburch) - 1 commit  
+[@helmutg](https://github.com/helmutg) - 1 commit  
+[@jriddell](https://github.com/jriddell) - 1 commit  
+[@legoktm](https://github.com/legoktm) - 1 commit  
+[@shadeslayer](https://github.com/shadeslayer) - 1 commit  
 
-*Note: This repository appears to be a mirror. Please refer to the upstream source for additional contributions.*
+Note: This repository may be a mirror. Please check the [upstream source](https://github.com/pkg-kde-tools) for additional context.
 <!-- AI:end:contributors -->
 
 ## Origins
