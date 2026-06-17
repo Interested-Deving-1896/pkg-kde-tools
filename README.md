@@ -92,7 +92,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 
 <!-- AI:start:contributors -->
 [@modax](https://github.com/modax) - 464 commits  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 71 commits  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 75 commits  
 [@mitya57](https://github.com/mitya57) - 61 commits  
 [@perezmeyer](https://github.com/perezmeyer) - 26 commits  
 [@maxyz](https://github.com/maxyz) - 23 commits  
@@ -113,7 +113,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 [@legoktm](https://github.com/legoktm) - 1 commit  
 [@shadeslayer](https://github.com/shadeslayer) - 1 commit  
 
-Note: This repository may be a mirror. Please check the [upstream source](https://github.com/pkg-kde-tools) for additional context.
+This repository may be a mirror. Please check the upstream source for additional details.
 <!-- AI:end:contributors -->
 
 ## Origins
