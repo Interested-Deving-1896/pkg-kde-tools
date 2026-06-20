@@ -3,7 +3,7 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and utilities to assist in packaging KDE software, particularly for Debian-based distributions. It addresses tasks such as generating and managing symbol files, handling Qt-specific packaging requirements, and automating common packaging workflows. It is primarily used by developers and maintainers working on KDE-related packages.
+This project provides a set of tools and utilities for packaging KDE software, primarily for use in Debian-based distributions. It addresses the need for automating and standardizing tasks such as generating symbol files, managing build dependencies, and handling KDE-specific packaging requirements. It is intended for developers and maintainers working on KDE software packaging.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
@@ -91,29 +91,29 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) - 464 commits  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 75 commits  
-[@mitya57](https://github.com/mitya57) - 61 commits  
-[@perezmeyer](https://github.com/perezmeyer) - 26 commits  
-[@maxyz](https://github.com/maxyz) - 23 commits  
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits  
-[@hefee](https://github.com/hefee) - 15 commits  
-[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits  
-[@OdyX](https://github.com/OdyX) - 4 commits  
-[@tsimonq2](https://github.com/tsimonq2) - 4 commits  
-[@svuorela](https://github.com/svuorela) - 4 commits  
-[@debian-janitor](https://github.com/debian-janitor) - 3 commits  
-[@delta-one](https://github.com/delta-one) - 3 commits  
-[@ana](https://github.com/ana) - 2 commits  
-[@detrout](https://github.com/detrout) - 2 commits  
-[@norbusan](https://github.com/norbusan) - 2 commits  
-[@aburch](https://github.com/aburch) - 1 commit  
-[@helmutg](https://github.com/helmutg) - 1 commit  
-[@jriddell](https://github.com/jriddell) - 1 commit  
-[@legoktm](https://github.com/legoktm) - 1 commit  
-[@shadeslayer](https://github.com/shadeslayer) - 1 commit  
+[@modax](https://github.com/modax) (464 commits)  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (78 commits)  
+[@mitya57](https://github.com/mitya57) (61 commits)  
+[@perezmeyer](https://github.com/perezmeyer) (26 commits)  
+[@maxyz](https://github.com/maxyz) (23 commits)  
+[@netrunner-sync-service](https://github.com/netrunner-sync-service) (18 commits)  
+[@hefee](https://github.com/hefee) (15 commits)  
+[@jmsantamaria](https://github.com/jmsantamaria) (9 commits)  
+[@OdyX](https://github.com/OdyX) (4 commits)  
+[@tsimonq2](https://github.com/tsimonq2) (4 commits)  
+[@svuorela](https://github.com/svuorela) (4 commits)  
+[@debian-janitor](https://github.com/debian-janitor) (3 commits)  
+[@delta-one](https://github.com/delta-one) (3 commits)  
+[@ana](https://github.com/ana) (2 commits)  
+[@detrout](https://github.com/detrout) (2 commits)  
+[@norbusan](https://github.com/norbusan) (2 commits)  
+[@aburch](https://github.com/aburch) (1 commit)  
+[@helmutg](https://github.com/helmutg) (1 commit)  
+[@jriddell](https://github.com/jriddell) (1 commit)  
+[@legoktm](https://github.com/legoktm) (1 commit)  
+[@shadeslayer](https://github.com/shadeslayer) (1 commit)  
 
-This repository may be a mirror. Please check the upstream source for additional details.
+*Note: This repository is a mirror. Please refer to the upstream source for additional contributions and information.*
 <!-- AI:end:contributors -->
 
 ## Origins
