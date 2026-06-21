@@ -120,7 +120,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 [@legoktm](https://github.com/legoktm) (1 commit)  
 [@shadeslayer](https://github.com/shadeslayer) (1 commit)  
 
-*Note: This repository is a mirror. Please refer to the upstream source for additional contributions.*
+*Note: This repository appears to be a mirror. Please refer to the upstream source for additional details.*
 <!-- AI:end:contributors -->
 
 ## Origins
