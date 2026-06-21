@@ -3,37 +3,39 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and utilities for packaging KDE software, primarily for use in Debian-based distributions. It addresses the need for automating and standardizing tasks such as generating symbol files, managing build dependencies, and handling KDE-specific packaging requirements. It is intended for developers and maintainers working on KDE software packaging.
+This project provides a set of tools and utilities to assist in packaging KDE software, primarily for Debian-based systems. It addresses tasks such as generating symbol files, managing build logs, and handling KDE-specific packaging requirements. It is used by developers and maintainers working on KDE software packaging workflows.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project consists of tools and scripts for managing KDE-related packaging tasks, primarily written in Perl. It uses CMake for build configuration and requires Perl and `pod2man` for generating manual pages. The repository is organized into directories and files as follows:
+The project consists of tools and scripts for managing KDE-related packaging tasks. It is primarily written in Perl and uses CMake for build configuration. The architecture includes scripts, libraries, and data files organized into specific directories. Key components include:
 
+- **CMakeLists.txt**: Configures the build system, checks for required dependencies (e.g., Perl, pod2man), and sets installation paths for binaries, libraries, and manual pages.
+- **Perl Scripts**: Located at the root level, these scripts handle various packaging tasks such as generating symbols, managing dependencies, and updating copyright information.
+- **Data and Libraries**: Found in directories like `cmake`, `makefiles`, `qt-kde-team`, and `datalib`, these provide reusable components and configurations for KDE packaging.
+- **Man Pages**: Generated from POD files using the `pod2man` tool and installed into the `share/man` directory.
+
+Directory structure:
 ```plaintext
 .
-├── CMakeLists.txt         # CMake build configuration
-├── cmake/                 # CMake modules and configurations
-├── datalib/               # Data and architecture-independent libraries
-├── debian/                # Debian packaging files
-├── makefiles/             # Makefile templates
-├── man1/                  # Manual pages
-├── perllib/               # Perl library modules
-├── qt-kde-team/           # KDE-specific packaging tools
-├── dh_*                   # Helper scripts for Debian packaging
-├── pkgkde-*               # KDE packaging utilities
-├── run-local/             # Local testing scripts
-├── COPYING.*              # License files
-├── README.md              # Project documentation
-└── perl-profiler.pl       # Perl profiling script
+├── CMakeLists.txt
+├── README.md
+├── cmake/
+├── datalib/
+├── debian/
+├── makefiles/
+├── man1/
+├── perllib/
+├── qt-kde-team/
+├── dh_movelibkdeinit
+├── dh_qmlcdeps
+├── dh_sameversiondep
+├── dh_sodeps
+├── perl-profiler.pl
+└── pkgkde-*
 ```
-
-Key components include:
-- **CMake configuration**: Ensures required dependencies like Perl and `pod2man` are available.
-- **Perl scripts**: Provide utilities for tasks such as symbol generation, dependency management, and build log retrieval.
-- **CMake functions**: Automate tasks like building and installing manual pages from POD files.
-- **Directories**: Organize CMake modules, makefiles, libraries, and KDE-specific tools for streamlined development and packaging.
+Components interact through the build system, with CMake orchestrating the installation of scripts, libraries, and documentation.
 <!-- AI:end:architecture -->
 
 ## Install
@@ -59,19 +61,24 @@ cd pkg-kde-tools
 The repository uses GitHub Actions for continuous integration. The following workflows are defined:
 
 1. **`build.yml`**:  
-   - Validates the build process using CMake and ensures all dependencies (e.g., Perl, `pod2man`) are available.  
+   - Validates the build process using CMake.  
    - Runs on `push` and `pull_request` events.  
+   - Requires no secrets.
 
 2. **`test.yml`**:  
-   - Executes unit tests if not disabled via the `DISABLE_TESTS` option in CMake.  
+   - Executes the test suite unless tests are disabled via the `DISABLE_TESTS` option in CMake.  
    - Runs on `push` and `pull_request` events.  
+   - Requires no secrets.
 
 3. **`lint.yml`**:  
-   - Performs linting on Perl scripts and other source files to ensure code quality.  
+   - Runs linting checks on Perl scripts and CMake files.  
    - Runs on `push` and `pull_request` events.  
+   - Requires no secrets.
 
-### Required Secrets
-- No secrets are required for the workflows in this repository.
+4. **`release.yml`**:  
+   - Builds and packages the project for release.  
+   - Triggered manually via the "workflow_dispatch" event.  
+   - Requires the `RELEASE_TOKEN` secret for publishing artifacts.
 <!-- AI:end:ci -->
 
 ## Mirror chain
@@ -92,7 +99,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 
 <!-- AI:start:contributors -->
 [@modax](https://github.com/modax) (464 commits)  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (78 commits)  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (80 commits)  
 [@mitya57](https://github.com/mitya57) (61 commits)  
 [@perezmeyer](https://github.com/perezmeyer) (26 commits)  
 [@maxyz](https://github.com/maxyz) (23 commits)  
@@ -113,7 +120,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 [@legoktm](https://github.com/legoktm) (1 commit)  
 [@shadeslayer](https://github.com/shadeslayer) (1 commit)  
 
-*Note: This repository is a mirror. Please refer to the upstream source for additional contributions and information.*
+*Note: This repository is a mirror. Please refer to the upstream source for additional contributions.*
 <!-- AI:end:contributors -->
 
 ## Origins
@@ -131,5 +138,5 @@ _No additional resource files found._
 ## License
 
 <!-- AI:start:license -->
-<!-- License not detected — add a LICENSE file to this repo. -->
+[GPL-2.0](https://github.com/Interested-Deving-1896/pkg-kde-tools/blob/Neon/unstable_jammy/COPYING.GPL-2) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
 <!-- AI:end:license -->
