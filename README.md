@@ -3,20 +3,24 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and utilities to assist in packaging KDE software, primarily for Debian-based systems. It addresses tasks such as generating symbol files, managing build logs, and handling KDE-specific packaging requirements. It is used by developers and maintainers working on KDE software packaging workflows.
+This project provides a set of tools and scripts to assist with packaging KDE software, primarily for Debian-based distributions. It addresses the need for automating and standardizing tasks such as symbol file generation, dependency management, and build log analysis. It is used by developers and maintainers working on KDE-related packages to streamline the packaging process.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project consists of tools and scripts for managing KDE-related packaging tasks. It is primarily written in Perl and uses CMake for build configuration. The architecture includes scripts, libraries, and data files organized into specific directories. Key components include:
+The project consists of tools and scripts for managing KDE-related packaging tasks. It is primarily written in Perl and uses CMake for build configuration. The architecture includes a set of Perl scripts, CMake modules, and auxiliary files organized into directories for specific purposes. Key components include:
 
-- **CMakeLists.txt**: Configures the build system, checks for required dependencies (e.g., Perl, pod2man), and sets installation paths for binaries, libraries, and manual pages.
-- **Perl Scripts**: Located at the root level, these scripts handle various packaging tasks such as generating symbols, managing dependencies, and updating copyright information.
-- **Data and Libraries**: Found in directories like `cmake`, `makefiles`, `qt-kde-team`, and `datalib`, these provide reusable components and configurations for KDE packaging.
-- **Man Pages**: Generated from POD files using the `pod2man` tool and installed into the `share/man` directory.
+- **Perl Scripts**: Located in the repository root, these scripts handle various packaging tasks such as generating symbols, managing dependencies, and updating copyright information.
+- **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl dependencies and installation paths for binaries, libraries, and manual pages.
+- **Auxiliary Directories**:
+  - `cmake`: Contains CMake modules for build configuration.
+  - `makefiles`: Includes makefile templates for packaging tasks.
+  - `qt-kde-team`: Contains KDE-specific packaging resources.
+  - `datalib`: Holds architecture-independent library bundles.
 
-Directory structure:
+The directory structure is as follows:
+
 ```plaintext
 .
 ├── CMakeLists.txt
@@ -35,7 +39,8 @@ Directory structure:
 ├── perl-profiler.pl
 └── pkgkde-*
 ```
-Components interact through the build system, with CMake orchestrating the installation of scripts, libraries, and documentation.
+
+CMake ensures required dependencies like `PerlLibs` and `pod2man` are available. It also provides functions for generating and installing manual pages from POD files.
 <!-- AI:end:architecture -->
 
 ## Install
@@ -62,23 +67,21 @@ The repository uses GitHub Actions for continuous integration. The following wor
 
 1. **`build.yml`**:  
    - Validates the build process using CMake.  
+   - Ensures required dependencies like Perl and `pod2man` are available.  
    - Runs on `push` and `pull_request` events.  
-   - Requires no secrets.
+   - No secrets required.
 
 2. **`test.yml`**:  
-   - Executes the test suite unless tests are disabled via the `DISABLE_TESTS` option in CMake.  
+   - Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in CMake.  
    - Runs on `push` and `pull_request` events.  
-   - Requires no secrets.
+   - No secrets required.
 
 3. **`lint.yml`**:  
-   - Runs linting checks on Perl scripts and CMake files.  
+   - Checks for coding style and syntax issues in Perl scripts and CMake files.  
    - Runs on `push` and `pull_request` events.  
-   - Requires no secrets.
+   - No secrets required.
 
-4. **`release.yml`**:  
-   - Builds and packages the project for release.  
-   - Triggered manually via the "workflow_dispatch" event.  
-   - Requires the `RELEASE_TOKEN` secret for publishing artifacts.
+All workflows are located in the `.github/workflows` directory. Ensure the repository has the necessary dependencies installed for successful execution.
 <!-- AI:end:ci -->
 
 ## Mirror chain
