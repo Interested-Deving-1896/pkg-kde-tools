@@ -3,28 +3,23 @@
 [![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and scripts to assist with packaging KDE software, primarily for Debian-based distributions. It addresses the need for automating and standardizing tasks such as symbol file generation, dependency management, and build log analysis. It is used by developers and maintainers working on KDE-related packages to streamline the packaging process.
+This project provides a set of tools and scripts to assist in packaging KDE software for Debian-based distributions. It addresses the complexities of managing KDE-specific build processes, dependency handling, and symbol management. It is primarily used by developers and maintainers working on KDE packages within the Debian and related ecosystems.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project consists of tools and scripts for managing KDE-related packaging tasks. It is primarily written in Perl and uses CMake for build configuration. The architecture includes a set of Perl scripts, CMake modules, and auxiliary files organized into directories for specific purposes. Key components include:
+The project is structured as a set of tools and scripts for managing KDE-related packaging tasks. It uses CMake for build configuration and requires Perl and the `pod2man` utility for generating manual pages. The key components include:
 
-- **Perl Scripts**: Located in the repository root, these scripts handle various packaging tasks such as generating symbols, managing dependencies, and updating copyright information.
-- **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl dependencies and installation paths for binaries, libraries, and manual pages.
-- **Auxiliary Directories**:
-  - `cmake`: Contains CMake modules for build configuration.
-  - `makefiles`: Includes makefile templates for packaging tasks.
-  - `qt-kde-team`: Contains KDE-specific packaging resources.
-  - `datalib`: Holds architecture-independent library bundles.
+1. **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl libraries and installation paths for binaries, libraries, data files, and manual pages.
+2. **Perl Scripts**: Located in the root directory, these scripts perform various packaging tasks, such as generating symbols files, managing dependencies, and handling version updates.
+3. **Support Files**: The `cmake`, `makefiles`, and `qt-kde-team` directories contain reusable CMake modules, build templates, and KDE-specific configurations.
+4. **Documentation**: Manual pages are generated from POD files using the `pod2man` utility and installed into the appropriate directories.
 
-The directory structure is as follows:
-
+Directory structure:
 ```plaintext
 .
 ├── CMakeLists.txt
-├── README.md
 ├── cmake/
 ├── datalib/
 ├── debian/
@@ -32,15 +27,11 @@ The directory structure is as follows:
 ├── man1/
 ├── perllib/
 ├── qt-kde-team/
-├── dh_movelibkdeinit
-├── dh_qmlcdeps
-├── dh_sameversiondep
-├── dh_sodeps
-├── perl-profiler.pl
-└── pkgkde-*
+├── scripts (e.g., dh_movelibkdeinit, pkgkde-gensymbols, pkgkde-update-qt-copyright)
+└── README.md
 ```
 
-CMake ensures required dependencies like `PerlLibs` and `pod2man` are available. It also provides functions for generating and installing manual pages from POD files.
+Components interact through CMake configuration, which orchestrates the build process, and Perl scripts, which handle KDE packaging tasks.
 <!-- AI:end:architecture -->
 
 ## Install
@@ -65,23 +56,25 @@ cd pkg-kde-tools
 <!-- AI:start:ci -->
 The repository uses GitHub Actions for continuous integration. The following workflows are defined:
 
-1. **`build.yml`**:  
-   - Validates the build process using CMake.  
-   - Ensures required dependencies like Perl and `pod2man` are available.  
-   - Runs on `push` and `pull_request` events.  
-   - No secrets required.
+1. **`build.yml`**  
+   - Ensures the project builds successfully using CMake.  
+   - Runs on `ubuntu-latest`.  
+   - Requires no secrets.
 
-2. **`test.yml`**:  
-   - Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in CMake.  
-   - Runs on `push` and `pull_request` events.  
-   - No secrets required.
+2. **`test.yml`**  
+   - Executes unit tests unless disabled via the `DISABLE_TESTS` option in CMake.  
+   - Runs on `ubuntu-latest`.  
+   - Requires no secrets.
 
-3. **`lint.yml`**:  
-   - Checks for coding style and syntax issues in Perl scripts and CMake files.  
-   - Runs on `push` and `pull_request` events.  
-   - No secrets required.
+3. **`lint.yml`**  
+   - Checks Perl scripts for syntax and style issues using `perl -c` and `perlcritic`.  
+   - Runs on `ubuntu-latest`.  
+   - Requires no secrets.
 
-All workflows are located in the `.github/workflows` directory. Ensure the repository has the necessary dependencies installed for successful execution.
+4. **`release.yml`**  
+   - Builds and packages the project for release.  
+   - Triggers on tag creation.  
+   - Requires the `GITHUB_TOKEN` secret for publishing release artifacts.
 <!-- AI:end:ci -->
 
 ## Mirror chain
@@ -101,29 +94,29 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) (464 commits)  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) (80 commits)  
-[@mitya57](https://github.com/mitya57) (61 commits)  
-[@perezmeyer](https://github.com/perezmeyer) (26 commits)  
-[@maxyz](https://github.com/maxyz) (23 commits)  
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) (18 commits)  
-[@hefee](https://github.com/hefee) (15 commits)  
-[@jmsantamaria](https://github.com/jmsantamaria) (9 commits)  
-[@OdyX](https://github.com/OdyX) (4 commits)  
-[@tsimonq2](https://github.com/tsimonq2) (4 commits)  
-[@svuorela](https://github.com/svuorela) (4 commits)  
-[@debian-janitor](https://github.com/debian-janitor) (3 commits)  
-[@delta-one](https://github.com/delta-one) (3 commits)  
-[@ana](https://github.com/ana) (2 commits)  
-[@detrout](https://github.com/detrout) (2 commits)  
-[@norbusan](https://github.com/norbusan) (2 commits)  
-[@aburch](https://github.com/aburch) (1 commit)  
-[@helmutg](https://github.com/helmutg) (1 commit)  
-[@jriddell](https://github.com/jriddell) (1 commit)  
-[@legoktm](https://github.com/legoktm) (1 commit)  
-[@shadeslayer](https://github.com/shadeslayer) (1 commit)  
+[@modax](https://github.com/modax) - 464 commits  
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 91 commits  
+[@mitya57](https://github.com/mitya57) - 61 commits  
+[@perezmeyer](https://github.com/perezmeyer) - 26 commits  
+[@maxyz](https://github.com/maxyz) - 23 commits  
+[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits  
+[@hefee](https://github.com/hefee) - 15 commits  
+[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits  
+[@OdyX](https://github.com/OdyX) - 4 commits  
+[@tsimonq2](https://github.com/tsimonq2) - 4 commits  
+[@svuorela](https://github.com/svuorela) - 4 commits  
+[@debian-janitor](https://github.com/debian-janitor) - 3 commits  
+[@delta-one](https://github.com/delta-one) - 3 commits  
+[@ana](https://github.com/ana) - 2 commits  
+[@detrout](https://github.com/detrout) - 2 commits  
+[@norbusan](https://github.com/norbusan) - 2 commits  
+[@aburch](https://github.com/aburch) - 1 commit  
+[@helmutg](https://github.com/helmutg) - 1 commit  
+[@jriddell](https://github.com/jriddell) - 1 commit  
+[@legoktm](https://github.com/legoktm) - 1 commit  
+[@shadeslayer](https://github.com/shadeslayer) - 1 commit  
 
-*Note: This repository appears to be a mirror. Please refer to the upstream source for additional details.*
+This repository may be a mirror. Please refer to the upstream source for additional details.
 <!-- AI:end:contributors -->
 
 ## Origins
