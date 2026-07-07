@@ -9,29 +9,26 @@ This project provides a set of tools and scripts to assist in packaging KDE soft
 ## Architecture
 
 <!-- AI:start:architecture -->
-The project is structured as a set of tools and scripts for managing KDE-related packaging tasks. It uses CMake for build configuration and requires Perl and the `pod2man` utility for generating manual pages. The key components include:
-
-1. **CMake Configuration**: The `CMakeLists.txt` file defines build requirements, including Perl libraries and installation paths for binaries, libraries, data files, and manual pages.
-2. **Perl Scripts**: Located in the root directory, these scripts perform various packaging tasks, such as generating symbols files, managing dependencies, and handling version updates.
-3. **Support Files**: The `cmake`, `makefiles`, and `qt-kde-team` directories contain reusable CMake modules, build templates, and KDE-specific configurations.
-4. **Documentation**: Manual pages are generated from POD files using the `pod2man` utility and installed into the appropriate directories.
+The project consists of several key components organized to support KDE packaging tools. It uses CMake for build configuration and Perl for scripting. The architecture includes scripts, libraries, and data files for KDE-related packaging tasks. The `CMakeLists.txt` file configures installation paths for binaries, libraries, data, and manual pages. It also ensures dependencies like Perl and `pod2man` are available. The repository includes Perl scripts for various packaging utilities and CMake functions for generating and installing manual pages.
 
 Directory structure:
 ```plaintext
 .
-├── CMakeLists.txt
-├── cmake/
-├── datalib/
-├── debian/
-├── makefiles/
-├── man1/
-├── perllib/
-├── qt-kde-team/
-├── scripts (e.g., dh_movelibkdeinit, pkgkde-gensymbols, pkgkde-update-qt-copyright)
-└── README.md
+├── CMakeLists.txt          # Build configuration
+├── cmake/                  # CMake modules
+├── datalib/                # Architecture-independent libraries
+├── debian/                 # Debian packaging files
+├── makefiles/              # Makefile templates
+├── man1/                   # Manual pages
+├── perllib/                # Perl libraries
+├── qt-kde-team/            # KDE-specific data
+├── scripts/                # Packaging and utility scripts
+├── COPYING.*               # License files
+├── README.md               # Project documentation
+└── tests/                  # Test scripts and resources
 ```
 
-Components interact through CMake configuration, which orchestrates the build process, and Perl scripts, which handle KDE packaging tasks.
+Components interact through CMake configuration, Perl scripts, and shared libraries to automate and streamline KDE packaging workflows.
 <!-- AI:end:architecture -->
 
 ## Install
