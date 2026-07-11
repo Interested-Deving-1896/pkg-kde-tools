@@ -1,6 +1,7 @@
 # pkg-kde-tools
 
-[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/pkg-kde-tools) [![KDE Eco](https://img.shields.io/badge/KDE%20Eco-certified-brightgreen?logo=kde&logoColor=white&style=flat-square)](https://eco.kde.org/) [![Blue Angel](https://img.shields.io/badge/Blue%20Angel-DE--UZ%20215-0055a4?style=flat-square)](https://www.blauer-engel.de/en/certification/criteria) [![Energy](https://api.green-coding.io/v1/ci/badge/get?repo=Interested-Deving-1896%2Fpkg-kde-tools&branch=main&workflow=eco-audit.yml)](https://metrics.green-coding.io/ci-index.html)
+
 
 <!-- AI:start:what-it-does -->
 This project provides a set of tools and utilities for building and maintaining KDE packages, primarily targeting developers and maintainers working with KDE software. It includes scripts, CMake configurations, and Perl modules to streamline tasks such as dependency management, symbol generation, and manual page creation. The tools aim to simplify workflows for packaging KDE applications in distributions.
@@ -58,19 +59,19 @@ cd pkg-kde-tools
 <!-- AI:start:ci -->
 The repository uses GitHub Actions for continuous integration. The following workflows are defined:
 
-1. **`build.yml`**:  
-   - Runs the CMake build process to ensure the project compiles successfully.  
-   - Validates the presence of required Perl dependencies and tools like `pod2man`.  
+1. **`build.yml`**:
+   - Runs the CMake build process to ensure the project compiles successfully.
+   - Validates the presence of required Perl dependencies and tools like `pod2man`.
    - No secrets are required.
 
-2. **`test.yml`**:  
-   - Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in the CMake configuration.  
-   - Ensures the integrity of the project's functionality.  
+2. **`test.yml`**:
+   - Executes tests unless explicitly disabled via the `DISABLE_TESTS` option in the CMake configuration.
+   - Ensures the integrity of the project's functionality.
    - No secrets are required.
 
-3. **`lint.yml`**:  
-   - Checks for code style and formatting issues in the repository.  
-   - Targets Perl scripts and CMake files.  
+3. **`lint.yml`**:
+   - Checks for code style and formatting issues in the repository.
+   - Targets Perl scripts and CMake files.
    - No secrets are required.
 
 All workflows are triggered on `push` and `pull_request` events.
@@ -93,27 +94,27 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) - 464 commits  
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 91 commits  
-[@mitya57](https://github.com/mitya57) - 61 commits  
-[@perezmeyer](https://github.com/perezmeyer) - 26 commits  
-[@maxyz](https://github.com/maxyz) - 23 commits  
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits  
-[@hefee](https://github.com/hefee) - 15 commits  
-[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits  
-[@OdyX](https://github.com/OdyX) - 4 commits  
-[@tsimonq2](https://github.com/tsimonq2) - 4 commits  
-[@svuorela](https://github.com/svuorela) - 4 commits  
-[@debian-janitor](https://github.com/debian-janitor) - 3 commits  
-[@delta-one](https://github.com/delta-one) - 3 commits  
-[@ana](https://github.com/ana) - 2 commits  
-[@detrout](https://github.com/detrout) - 2 commits  
-[@norbusan](https://github.com/norbusan) - 2 commits  
-[@aburch](https://github.com/aburch) - 1 commit  
-[@helmutg](https://github.com/helmutg) - 1 commit  
-[@jriddell](https://github.com/jriddell) - 1 commit  
-[@legoktm](https://github.com/legoktm) - 1 commit  
-[@shadeslayer](https://github.com/shadeslayer) - 1 commit  
+[@modax](https://github.com/modax) - 464 commits
+[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 91 commits
+[@mitya57](https://github.com/mitya57) - 61 commits
+[@perezmeyer](https://github.com/perezmeyer) - 26 commits
+[@maxyz](https://github.com/maxyz) - 23 commits
+[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits
+[@hefee](https://github.com/hefee) - 15 commits
+[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits
+[@OdyX](https://github.com/OdyX) - 4 commits
+[@tsimonq2](https://github.com/tsimonq2) - 4 commits
+[@svuorela](https://github.com/svuorela) - 4 commits
+[@debian-janitor](https://github.com/debian-janitor) - 3 commits
+[@delta-one](https://github.com/delta-one) - 3 commits
+[@ana](https://github.com/ana) - 2 commits
+[@detrout](https://github.com/detrout) - 2 commits
+[@norbusan](https://github.com/norbusan) - 2 commits
+[@aburch](https://github.com/aburch) - 1 commit
+[@helmutg](https://github.com/helmutg) - 1 commit
+[@jriddell](https://github.com/jriddell) - 1 commit
+[@legoktm](https://github.com/legoktm) - 1 commit
+[@shadeslayer](https://github.com/shadeslayer) - 1 commit
 
 This repository may be a mirror. Please refer to the upstream source for additional details.
 <!-- AI:end:contributors -->
@@ -129,6 +130,20 @@ _Original project — no upstream fork._
 <!-- AI:start:resources -->
 _No additional resource files found._
 <!-- AI:end:resources -->
+
+<!-- AI:start:accessibility -->
+This repo uses automated accessibility auditing via `check-accessibility.yml`.
+
+Checks include: CODEOWNERS ownership coverage, README screen-reader compatibility,
+WCAG 2.1 AA HTML compliance, audio overview (espeak-ng), and Braille output (liblouis).
+
+
+
+
+Run the [Check Accessibility](https://github.com/Interested-Deving-1896/pkg-kde-tools/actions/workflows/check-accessibility.yml)
+workflow to generate the first report and accessibility artifacts.
+See [DOCS/accessibility.md](https://github.com/Interested-Deving-1896/pkg-kde-tools/blob/main/DOCS/accessibility.md) for the full reference.
+<!-- AI:end:accessibility -->
 
 ## License
 
