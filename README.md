@@ -4,7 +4,7 @@
 
 
 <!-- AI:start:what-it-does -->
-This project provides a set of tools and utilities for building and maintaining KDE packages, primarily targeting developers and maintainers working with KDE software. It includes scripts, CMake configurations, and Perl modules to streamline tasks such as dependency management, symbol generation, and manual page creation. The tools aim to simplify workflows for packaging KDE applications in distributions.
+This project provides tools and scripts to assist in packaging KDE software for Debian-based systems. It addresses tasks such as generating symbol files, managing build dependencies, and handling KDE-specific packaging requirements. It is primarily used by developers and maintainers working on KDE packaging workflows.
 <!-- AI:end:what-it-does -->
 
 ## Architecture
