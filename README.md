@@ -98,7 +98,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 | Contributor | Commits |
 |---|---|
 | [@modax](https://github.com/modax) | 464 |
-| [@Interested-Deving-1896](https://github.com/Interested-Deving-1896) | 110 |
+| [@Interested-Deving-1896](https://github.com/Interested-Deving-1896) | 129 |
 | [@mitya57](https://github.com/mitya57) | 61 |
 | [@perezmeyer](https://github.com/perezmeyer) | 26 |
 | [@maxyz](https://github.com/maxyz) | 23 |
@@ -152,5 +152,5 @@ for the underlying accessibility reference.
 ## License
 
 <!-- AI:start:license -->
-[GPL-2.0](https://github.com/Interested-Deving-1896/pkg-kde-tools/blob/Neon/unstable_jammy/COPYING.GPL-2) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+[GPL-3.0](https://github.com/Interested-Deving-1896/pkg-kde-tools/blob/Neon/unstable_jammy/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
 <!-- AI:end:license -->
