@@ -95,29 +95,29 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 ## Contributors
 
 <!-- AI:start:contributors -->
-[@modax](https://github.com/modax) - 464 commits
-[@Interested-Deving-1896](https://github.com/Interested-Deving-1896) - 91 commits
-[@mitya57](https://github.com/mitya57) - 61 commits
-[@perezmeyer](https://github.com/perezmeyer) - 26 commits
-[@maxyz](https://github.com/maxyz) - 23 commits
-[@netrunner-sync-service](https://github.com/netrunner-sync-service) - 18 commits
-[@hefee](https://github.com/hefee) - 15 commits
-[@jmsantamaria](https://github.com/jmsantamaria) - 9 commits
-[@OdyX](https://github.com/OdyX) - 4 commits
-[@tsimonq2](https://github.com/tsimonq2) - 4 commits
-[@svuorela](https://github.com/svuorela) - 4 commits
-[@debian-janitor](https://github.com/debian-janitor) - 3 commits
-[@delta-one](https://github.com/delta-one) - 3 commits
-[@ana](https://github.com/ana) - 2 commits
-[@detrout](https://github.com/detrout) - 2 commits
-[@norbusan](https://github.com/norbusan) - 2 commits
-[@aburch](https://github.com/aburch) - 1 commit
-[@helmutg](https://github.com/helmutg) - 1 commit
-[@jriddell](https://github.com/jriddell) - 1 commit
-[@legoktm](https://github.com/legoktm) - 1 commit
-[@shadeslayer](https://github.com/shadeslayer) - 1 commit
-
-This repository may be a mirror. Please refer to the upstream source for additional details.
+| Contributor | Commits |
+|---|---|
+| [@modax](https://github.com/modax) | 464 |
+| [@Interested-Deving-1896](https://github.com/Interested-Deving-1896) | 110 |
+| [@mitya57](https://github.com/mitya57) | 61 |
+| [@perezmeyer](https://github.com/perezmeyer) | 26 |
+| [@maxyz](https://github.com/maxyz) | 23 |
+| [@netrunner-sync-service](https://github.com/netrunner-sync-service) | 18 |
+| [@hefee](https://github.com/hefee) | 15 |
+| [@jmsantamaria](https://github.com/jmsantamaria) | 9 |
+| [@OdyX](https://github.com/OdyX) | 4 |
+| [@tsimonq2](https://github.com/tsimonq2) | 4 |
+| [@svuorela](https://github.com/svuorela) | 4 |
+| [@debian-janitor](https://github.com/debian-janitor) | 3 |
+| [@delta-one](https://github.com/delta-one) | 3 |
+| [@ana](https://github.com/ana) | 2 |
+| [@detrout](https://github.com/detrout) | 2 |
+| [@norbusan](https://github.com/norbusan) | 2 |
+| [@aburch](https://github.com/aburch) | 1 |
+| [@helmutg](https://github.com/helmutg) | 1 |
+| [@jriddell](https://github.com/jriddell) | 1 |
+| [@legoktm](https://github.com/legoktm) | 1 |
+| [@shadeslayer](https://github.com/shadeslayer) | 1 |
 <!-- AI:end:contributors -->
 
 ## Origins
